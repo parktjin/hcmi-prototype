@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCMI New Design Prototype</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <!-- NAVIGATION -->
+    <nav class="bg-white shadow-md p-4 sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-900">HCMI <span class="font-light">Redesign</span></div>
+            <div class="hidden md:flex space-x-6 text-gray-600 font-medium">
+                <a href="#" class="hover:text-blue-600 transition">교회소개</a>
+                <a href="#" class="hover:text-blue-600 transition">사역안내</a>
+                <a href="#" class="hover:text-blue-600 transition">게시판</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN GRID -->
+    <main class="max-w-6xl mx-auto mt-8 p-4 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- LEFT: MAIN CONTENT AREA (8 columns) -->
+        <div class="lg:col-span-8 space-y-6">
+            <div class="bg-blue-800 h-80 rounded-2xl flex items-center justify-center text-white text-4xl shadow-xl overflow-hidden relative">
+                <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-transparent opacity-50"></div>
+                <h2 class="relative z-10 font-serif">하늘나라 소망을 꿈꾸는 공동체</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-blue-500">
+                    <h3 class="font-bold text-lg mb-2">예배 안내</h3>
+                    <p class="text-gray-500 text-sm">주일 대예배: 오전 11:00</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-sm border-t-4 border-green-500">
+                    <h3 class="font-bold text-lg mb-2">금주 성경말씀</h3>
+                    <p class="text-gray-500 text-sm">마태복음 5:1-12</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT: REAL-TIME FORUM (4 columns) -->
+        <aside class="lg:col-span-4 bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden">
+            <div class="bg-gray-50 p-4 border-b flex justify-between items-center">
+                <h2 class="font-bold text-gray-800">최근 게시글 (Real-time)</h2>
+                <span class="animate-pulse flex h-2 w-2 rounded-full bg-green-500"></span>
+            </div>
+            <ul id="post-list" class="divide-y divide-gray-100">
+                <li class="p-6 text-center text-gray-400">데이터를 불러오는 중...</li>
+            </ul>
+        </aside>
+
+    </main>
+
+    <script>
+        async function fetchPosts() {
+            try {
+                const res = await fetch('/api/posts');
+                const posts = await res.json();
+                const list = document.getElementById('post-list');
+                
+                list.innerHTML = posts.map(post => `
+                    <li class="hover:bg-blue-50 transition p-4">
+                        <a href="${post.url}" target="_blank" class="block">
+                            <p class="text-sm text-gray-800 font-medium truncate">${post.title}</p>
+                            <p class="text-xs text-blue-500 mt-1">자세히 보기 →</p>
+                        </a>
+                    </li>
+                `).join('');
+            } catch (e) {
+                document.getElementById('post-list').innerHTML = "<li class='p-4 text-red-400'>연결 오류</li>";
+            }
+        }
+        fetchPosts();
+    </script>
+</body>
+</html>

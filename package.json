@@ -1,0 +1,27 @@
+{
+  "name": "hcmi-prototype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parktjin/hcmi-prototype.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/parktjin/hcmi-prototype/issues"
+  },
+  "homepage": "https://github.com/parktjin/hcmi-prototype#readme",
+  "dependencies": {
+    "axios": "^1.16.0",
+    "cheerio": "^1.2.0",
+    "express": "^5.2.1",
+    "iconv-lite": "^0.7.2"
+  }
+}
