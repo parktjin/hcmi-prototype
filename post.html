@@ -7,233 +7,272 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background-color: #f8f9fa; font-family: "맑은 고딕", "Malgun Gothic", sans-serif; }
-        
-        /* Rule: Full-width banner, no horizontal spacing */
-        .full-width-banner .carousel-item img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Sidebar Styling (Faithful to Original Purple/Violet Tones) */
-        .sidebar-card { border: 1px solid #a28ab6; }
-        .sidebar-header { background-color: #a28ab6; color: white; font-weight: bold; }
-        .sidebar-link { 
-            color: #555; 
-            text-decoration: none; 
-            display: block; 
-            padding: 10px 15px; 
-            border-bottom: 1px solid #e9ecef;
-            font-size: 0.9rem;
-        }
-        .sidebar-link:hover { background-color: #f0e6ee; color: #a28ab6; }
-        .sidebar-link.active { background-color: #f0e6ee; color: #a28ab6; font-weight: bold; }
-
-        /* Post Content Styling */
-        .post-title-area { background-color: #f0e6ee; padding: 15px; border-radius: 4px 4px 0 0; }
-        .post-content img { max-width: 100%; height: auto; display: block; margin: 20px auto; border-radius: 5px; }
-        .post-body-text { font-size: 1.1rem; line-height: 1.8; color: #333; }
-
-        /* Comments Styling */
-        .comment-row { background-color: #f6f6f6; border-bottom: 1px solid #e3e3e3; padding: 15px; font-size: 0.9rem; }
-        .comment-meta { color: #666; font-size: 0.8rem; }
-        .edit-icon { color: #00008b; cursor: pointer; font-size: 0.8rem; margin-left: 5px; }
-
-        /* Board List Table */
-        .board-list-table { font-size: 0.85rem; }
-        .board-list-table thead { background-color: #cecece; }
+        body { background-color: #f8f9fa; }
+        .post-body img { max-width: 100%; height: auto; margin: 20px 0; border-radius: 0.375rem; }
+        .comment-row { border-bottom: 1px solid #dee2e6; padding: 1rem 0; }
+        .sidebar-link { text-decoration: none; }
     </style>
 </head>
 <body>
 
-<!-- Navbar -->
-<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+<!-- Navbar (Same as Index) -->
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark shadow-sm">
     <div class="container">
-        <a class="navbar-brand" href="#">가사원</a>
+        <a class="navbar-brand fw-bold" href="index.html">가사원</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mainNav">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">가정교회사역원소개</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">세미나 및 행사</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">목자들의광장</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">상담실&나눔터</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">자료실</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">네트워크</a></li>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Introduction</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">What is House Church?</a></li>
+                        <li><a class="dropdown-item" href="#">Mission</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Seminars & Events</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Calendar</a></li>
+                        <li><a class="dropdown-item" href="#">Seminars</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#">Shepherds' Square</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Counseling & Sharing</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<!-- FULL WIDTH CAROUSEL BANNER (Rule: Edge to Edge) -->
-<div class="container-fluid px-0 full-width-banner shadow-sm">
-    <div id="topBannerCarousel" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="5000">
-                <img src="car1.jpg" alt="Banner 1">
-            </div>
-            <div class="carousel-item" data-bs-interval="5000">
-                <img src="car2.jpg" alt="Banner 2">
-            </div>
-            <div class="carousel-item" data-bs-interval="5000">
-                <img src="car3.jpg" alt="Banner 3">
-            </div>
+<div class="container py-4">
+    <!-- Static Header Image (Root Level) -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <img src="community_flash_img.jpg" class="img-fluid rounded shadow-sm w-100" alt="Community Header">
         </div>
     </div>
-</div>
 
-<main class="container py-4">
     <div class="row">
-        <!-- Sidebar Menu -->
+        <!-- Sidebar (Col 3) -->
         <aside class="col-lg-3 mb-4">
-            <div class="card sidebar-card shadow-sm">
-                <div class="sidebar-header p-3 text-center">상담실 & 나눔터</div>
+            <div class="card">
+                <div class="card-header bg-secondary text-white fw-bold">상담실 & 나눔터</div>
                 <div class="list-group list-group-flush">
-                    <a href="#" class="sidebar-link active">가정교회 토론방</a>
-                    <a href="#" class="sidebar-link">구인/구직 게시판</a>
-                    <a href="#" class="sidebar-link">개척 가정교회 나눔방</a>
-                    <a href="#" class="sidebar-link">나눔터</a>
-                    <a href="#" class="sidebar-link">원장코너</a>
+                    <a href="#" class="list-group-item list-group-item-action fw-bold active">가정교회 토론방</a>
+                    <a href="#" class="list-group-item list-group-item-action">구인/구직 게시판</a>
+                    <a href="#" class="list-group-item list-group-item-action">개척 가정교회 나눔방</a>
+                    <a href="#" class="list-group-item list-group-item-action">나눔터</a>
+                    <a href="#" class="list-group-item list-group-item-action">원장코너</a>
                 </div>
             </div>
         </aside>
 
-        <!-- Main Content Area -->
-        <div class="col-lg-9">
-            <!-- Post View -->
-            <div class="card shadow-sm border-0 mb-4">
-                <div class="post-title-area">
-                    <h5 class="fw-bold mb-0">Reflection After Hosting House Church Seminar for Lay Leaders - 평신도 세미나 주최 후 소감문</h5>
+        <!-- Main Content (Col 9) -->
+        <main class="col-lg-9">
+            <!-- Article Area -->
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header bg-light">
+                    <h5 class="mb-0 fw-bold">Reflection After Hosting House Church Seminar for Lay Leaders - 평신도 세미나 주최 후 소감문</h5>
                 </div>
-                <div class="card-body p-4">
-                    <!-- Meta Info -->
-                    <div class="row small text-muted border-bottom pb-2 mb-4">
+                <div class="card-body">
+                    <!-- Meta info -->
+                    <div class="row border-bottom pb-2 mb-4 small text-muted">
                         <div class="col-md-4"><strong>작성자:</strong> 김영수</div>
                         <div class="col-md-4 text-center"><strong>날짜:</strong> 2026-04-28 14:57:41</div>
                         <div class="col-md-4 text-end"><strong>조회:</strong> 195 | <strong>추천:</strong> 5</div>
                     </div>
 
-                    <!-- Post Body (Full Content from Korean Code) -->
-                    <div class="post-body-text">
-                        <p>We are located in a small city called San Luis Obispo in California... Our church has been practicing house church ministry for the past 12 years. Currently, we have 14 English-speaking house churches and 2 Korean-speaking house churches.</p>
+                    <!-- All Post Content -->
+                    <div class="post-body fs-5">
+                        <p>We are located in a small city called San Luis Obispo in California, with a population of about 50,000 and a nearby university. Our church has been practicing house church ministry for the past 12 years. Currently, we have 14 English-speaking house churches and 2 Korean-speaking house churches. I personally came to faith in this church during my college years, and I have been serving as the pastor since 2000, leading both congregations.</p>
                         
-                        <img src="/upload_data/board/b24/20260429071411957.jpeg" alt="Image 1">
+                        <div class="text-center"><img src="/upload_data/board/b24/20260429071411957.jpeg" alt="Image 1"></div>
 
-                        <p>We were truly blessed to host our very first Lay Leaders Seminar from April 10–12. As a church, we have committed to becoming a <b>resource church</b>...</p>
+                        <p>We were truly blessed to host our very first Lay Leaders Seminar from April 10–12. As a church, we have committed to becoming a <strong>resource church</strong> for house church ministry, and this seminar was a significant step toward fulfilling that mission in North America. A total of 24 participants joined us—3 from New Jersey, 6 from Houston, and the rest from various parts of California.</p>
                         
-                        <img src="/upload_data/board/b24/20260429071454360.jpeg" alt="Image 2">
+                        <div class="text-center"><img src="/upload_data/board/b24/20260429071454360.jpeg" alt="Image 2"></div>
 
-                        <p>저희 교회는 캘리포니아의 San Luis Obispo라는 작은 도시에 위치해 있으며... 이번 4월 10일부터 12일까지 저희 교회에서 처음으로 평신도 세미나를 주최하게 된 것은 큰 은혜와 축복이었습니다.</p>
+                        <p>Preparing for the seminar was both challenging and rewarding. We deep-cleaned our church campus to prepare spaces for teaching and meals, and many of our members opened their homes to host participants. As I prepared the teaching materials, I was also personally challenged, realizing areas where we as a church can continue to grow—for example, ensuring that each house church is intentionally praying for, investing in, and inviting at least five VIPs.</p>
 
-                        <img src="/upload_data/board/b24/20260429071915371.jpeg" alt="Rainbow Image">
-                        <p class="text-center small">God showed us a rainbow, too.</p>
+                        <div class="text-center"><img src="/upload_data/board/b24/20260429071615850.jpeg" alt="Image 3"></div>
+
+                        <p>The seminar itself was a great blessing. We received tremendous support and guidance from New Life Fellowship during the preparation process, and we were able to follow what we had learned. Our entire church came together to serve, and many sacrificed greatly. Some even picked up participants at 2 a.m., doing everything they could to provide excellent hospitality.</p>
+
+                        <div class="text-center"><img src="/upload_data/board/b24/20260429071654408.jpeg" alt="Image 4"></div>
+
+                        <p>We received many encouraging comments from participants, including remarks such as, <em>“Did you hire servers? They are so professional.”</em> Our goal was to honor the participants—many of whom are current or future shepherds—and to provide them with a meaningful and encouraging experience as they learned about house church ministry.</p>
+
+                        <div class="text-center">
+                            <img src="/upload_data/board/b24/20260429071808408.jpeg" alt="Image 5">
+                            <img src="/upload_data/board/b24/20260429071842366.jpeg" alt="Image 6">
+                        </div>
+
+                        <p>We are currently collecting stories and feedback from both participants and our church members as we reflect on this experience and consider how we can improve for future seminars. Above all, we are grateful to God for allowing us to be used in this way.</p>
+
+                        <div class="text-center">
+                            <img src="/upload_data/board/b24/20260429071915371.jpeg" alt="Image 7">
+                            <p class="small text-muted">God showed us a rainbow, too.</p>
+                        </div>
+
+                        <hr class="my-5">
+
+                        <!-- Korean Content -->
+                        <div class="korean-text" style="font-family: 'Batang', serif;">
+                            <p>저희 교회는 캘리포니아의 San Luis Obispo라는 작은 도시에 위치해 있으며, 약 5만 명의 인구와 인근에 대학교가 있는 지역입니다. 저희 교회는 지난 12년 동안 가정교회 사역을 해오고 있으며, 현재 영어권 가정교회 14개와 한국어권 가정교회 2개가 있습니다.</p>
+                            <p>이번 4월 10일부터 12일까지 저희 교회에서 처음으로 평신도 세미나를 주최하게 된 것은 큰 은혜와 축복이었습니다. 저희 교회는 가정교회 사역을 위한 <strong>자원교회</strong>가 되는 것을 하나의 사명으로 품고 있는데, 이번 세미나는 북미 지역에서 그 사명을 감당하기 위한 중요한 첫걸음이었습니다.</p>
+                            <p>세미나를 준비하는 과정은 쉽지 않았지만 동시에 큰 은혜의 시간이었습니다. 무엇보다 교회 전체가 하나 되어 섬겼고, 많은 분들이 헌신적으로 수고해 주셨습니다. 참가자들로부터 많은 격려의 피드백도 받았습니다. 저희의 목표는 참가자들을 존중하고 귀하게 섬기며, 은혜로운 시간을 경험하도록 돕는 것이었습니다.</p>
+                        </div>
                     </div>
                 </div>
-                
-                <!-- Action Buttons -->
-                <div class="card-footer bg-white border-top-0 py-3 text-end">
-                    <button class="btn btn-outline-secondary btn-sm me-1">프린트</button>
-                    <button class="btn btn-primary btn-sm me-1">추천</button>
-                    <button class="btn btn-dark btn-sm me-1">수정</button>
-                    <button class="btn btn-danger btn-sm me-1">삭제</button>
-                    <button class="btn btn-secondary btn-sm me-1">답변</button>
+                <div class="card-footer bg-white py-3 text-end">
+                    <button class="btn btn-outline-secondary btn-sm">프린트</button>
+                    <button class="btn btn-primary btn-sm">추천</button>
+                    <button class="btn btn-secondary btn-sm">수정</button>
+                    <button class="btn btn-danger btn-sm">삭제</button>
                     <button class="btn btn-dark btn-sm">목록</button>
                 </div>
             </div>
 
-            <!-- ALL 12 COMMENTS (Extracted from Korean Code) -->
-            <div class="card shadow-sm border-0 mb-4">
-                <div class="card-header bg-light fw-bold">댓글</div>
+            <!-- Comments Section (All 12) -->
+            <div class="card mb-4 shadow-sm">
+                <div class="card-header fw-bold">댓글</div>
                 <div class="card-body p-0">
-                    <div class="comment-row"><b>신동일 :</b> 분위기가 너무 밝고 따뜻했고 섬기는 분들의 얼굴에 웃음이 가득했었습니다. (04.28 15:22) <span class="edit-icon">ⓔ</span></div>
-                    <div class="comment-row"><b>최병희A :</b> 영어권 평신도 세미나가 북미에서 4 곳에서 열리는 것이 놀라울 따름입니다. (04.28 15:56) <span class="edit-icon">ⓔ</span></div>
-                    <div class="comment-row"><b>오상연 :</b> Praise God! incredible to see what you and members were able to offer... (04.28 16:41) <span class="edit-icon">ⓔ</span></div>
-                    <div class="comment-row"><b>이경태 :</b> 우와~ 평세로 섬기시다니 넘 멋져부러요~ 영어권에서 더 많은 가정교회가... (04.28 17:16) <span class="edit-icon">ⓔ</span></div>
-                    <div class="comment-row"><b>최지원 :</b> You are a great blessing to us all. And hearing that you are leading... (04.28 17:23) <span class="edit-icon">ⓔ</span></div>
-                    <div class="comment-row"><b>염인철 :</b> 영어권 가정교회 14개와 한국어권 가정교회 2개가 있다는 것이 정말 인상적입니다. (04.28 17:40) <span class="edit-icon">ⓔ</span></div>
-                    <div class="comment-row"><b>남인철 :</b> 김영수 목사님, 24분의 참가자를 섬기신 것도 아름답고... 축하드립니다. (04.29 09:05) <span class="edit-icon">ⓔ</span></div>
-                    <div class="comment-row"><b>DanielHyun :</b> 목사님, 너무 멋져요. 기쁨과 웃음과 섬김이 있는 천국의 분위기였을거 같아요. (04.29 12:18) <span class="edit-icon">ⓔ</span></div>
-                    <div class="comment-row"><b>홈피지킴이 :</b> 첫 세미나 성공적으로 끝내심을 축하드립니다. 보고서는 나눔터에 올려주세요. (04.29 21:02) <span class="edit-icon">ⓔ</span></div>
-                    <div class="comment-row"><b>박태진 :</b> 너무나도 아름다운 섬김 감사드립니다. 저도 같이 가야겠습니다. (04.30 06:58) <span class="edit-icon">ⓔ</span></div>
-                    <div class="comment-row"><b>강재원 :</b> 첫 평세를 성공적으로 마치신 것을 축하드립니다. 반가운 소식 기대합니다. (05.06 22:07) <span class="edit-icon">ⓔ</span></div>
-                    <div class="comment-row"><b>양수지 :</b> 김영수 목사님, 정말 수고 많으셨고 귀한 섬김과 나눔 감사 드립니다! (05.06 22:11) <span class="edit-icon">ⓔ</span></div>
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item bg-light"><strong>신동일 :</strong> 분위기가 너무 밝고 따뜻했고 섬기는 분들의 얼굴에 웃음이 가득했었습니다. (04.28 15:22)</div>
+                        <div class="list-group-item"><strong>최병희A :</strong> 영어권 평신도 세미나가 북미에서 4 곳에서 열리는 것이 놀라울 따름입니다. (04.28 15:56)</div>
+                        <div class="list-group-item bg-light"><strong>오상연 :</strong> Praise God! incredible to see what you and members were able to offer... (04.28 16:41)</div>
+                        <div class="list-group-item"><strong>이경태 :</strong> 우와~ 평세로 섬기시다니 넘 멋져부러요~ 영어권에서 더 많은... (04.28 17:16)</div>
+                        <div class="list-group-item bg-light"><strong>최지원 :</strong> Every time I hear updates about English-speaking house churches... (04.28 17:23)</div>
+                        <div class="list-group-item"><strong>염인철 :</strong> 영어권 가정교회 14개와 한국어권 가정교회 2개가 있다는 것이 인상적입니다. (04.28 17:40)</div>
+                        <div class="list-group-item bg-light"><strong>남인철 :</strong> 김영수 목사님, 24분의 참가자를 섬기신 것도 아름답고 축하드립니다. (04.29 09:05)</div>
+                        <div class="list-group-item"><strong>DanielHyun :</strong> 목사님, 너무 멋져요. 기쁨과 웃음과 섬김이 있는 천국 분위기였을거예요. (04.29 12:18)</div>
+                        <div class="list-group-item bg-light"><strong>홈피지킴이 :</strong> 첫 세미나 성공적으로 끝내심을 축하드립니다. (04.29 21:02)</div>
+                        <div class="list-group-item"><strong>박태진 :</strong> 너무나도 아름다운 섬김 감사드립니다. 저도 같이 가야겠습니다. (04.30 06:58)</div>
+                        <div class="list-group-item bg-light"><strong>강재원 :</strong> 첫 평세를 성공적으로 마치신 것을 축하드립니다. (05.06 22:07)</div>
+                        <div class="list-group-item"><strong>양수지 :</strong> 김영수 목사님, 정말 수고 많으셨고 귀한 섬김과 나눔 감사 드립니다! (05.06 22:11)</div>
+                    </div>
                 </div>
-                <!-- Comment Input Form -->
-                <div class="p-3 bg-light border-top">
-                    <form class="row g-2 align-items-center">
-                        <div class="col-auto"><input type="text" class="form-control form-control-sm" placeholder="이름"></div>
-                        <div class="col-auto"><input type="password" class="form-control form-control-sm" placeholder="비밀번호"></div>
-                        <div class="col-auto"><img src="/chnet2/board/captcha/image.php" height="30" class="border rounded" alt="Captcha"></div>
-                        <div class="col-auto"><input type="text" class="form-control form-control-sm" style="width: 60px;" placeholder="코드"></div>
-                        <div class="col-12"><textarea class="form-control" rows="2" placeholder="댓글 내용을 입력하세요"></textarea></div>
-                        <div class="col-12 text-end"><button class="btn btn-primary btn-sm px-4">저장</button></div>
+                <!-- Comment Input -->
+                <div class="card-footer bg-light">
+                    <form class="row g-2">
+                        <div class="col-md-3"><input type="text" class="form-control form-control-sm" placeholder="이름"></div>
+                        <div class="col-md-3"><input type="password" class="form-control form-control-sm" placeholder="비밀번호"></div>
+                        <div class="col-md-6 d-flex align-items-center">
+                            <img src="captcha.jpg" height="30" class="border rounded me-2" alt="Captcha">
+                            <input type="text" class="form-control form-control-sm w-25" placeholder="코드">
+                        </div>
+                        <div class="col-12 mt-2">
+                            <textarea class="form-control" rows="2" placeholder="댓글 내용을 입력하세요"></textarea>
+                        </div>
+                        <div class="col-12 text-end mt-2">
+                            <button type="submit" class="btn btn-primary btn-sm">저장</button>
+                        </div>
                     </form>
                 </div>
             </div>
 
-            <!-- BOARD LIST (Same entries as original) -->
+            <!-- Board List (10 latest entries) -->
             <div class="table-responsive">
-                <table class="table table-hover board-list-table border shadow-sm bg-white">
-                    <thead class="text-center">
-                        <tr>
+                <table class="table table-hover border bg-white small">
+                    <thead class="table-secondary">
+                        <tr class="text-center">
                             <th>번호</th>
                             <th>제 목</th>
                             <th>이름</th>
                             <th>작성일</th>
                             <th>조회</th>
-                            <th>추천</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="text-center">3647</td>
-                            <td>♥개척가정교회｜"가정교회를 이끌고 나갈 미래의 용사들" <span class="text-secondary small">(21)</span></td>
+                            <td>♥개척가정교회｜"가정교회를 이끌고 나갈 미래의 용사들" (21)</td>
                             <td class="text-center">이채희</td>
                             <td class="text-center">2026.04.28</td>
                             <td class="text-center">478</td>
-                            <td class="text-center">6</td>
                         </tr>
                         <tr class="table-info">
                             <td class="text-center fw-bold">>></td>
-                            <td><b>Reflection After Hosting House Church Seminar for Lay Leaders...</b> <span class="text-secondary small">(12)</span></td>
+                            <td class="fw-bold">Reflection After Hosting House Church Seminar for Lay Leaders... (12)</td>
                             <td class="text-center">김영수</td>
                             <td class="text-center">2026.04.28</td>
                             <td class="text-center">195</td>
-                            <td class="text-center">5</td>
                         </tr>
                         <tr>
                             <td class="text-center">3645</td>
-                            <td>소문의 낙원 휴스턴서울교회(연수보고) <span class="text-secondary small">(3)</span></td>
+                            <td>소문의 낙원 휴스턴서울교회(연수보고) (3)</td>
                             <td class="text-center">권선희</td>
                             <td class="text-center">2026.04.24</td>
                             <td class="text-center">268</td>
-                            <td class="text-center">5</td>
                         </tr>
                         <tr>
                             <td class="text-center">3644</td>
-                            <td>"꽃 피는 벤쿠버" 140차 북미 목회자 컨퍼런스 <span class="text-secondary small">(20)</span></td>
+                            <td>"꽃 피는 벤쿠버" 140차 북미 목회자 컨퍼런스 (20)</td>
                             <td class="text-center">최지원</td>
                             <td class="text-center">2026.04.24</td>
                             <td class="text-center">337</td>
-                            <td class="text-center">11</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">3643</td>
+                            <td>(교회의 유익을 우선하는) 정면 돌파! 솔직함과 소통의 목회! (9)</td>
+                            <td class="text-center">김형구</td>
+                            <td class="text-center">2026.04.22</td>
+                            <td class="text-center">347</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">3642</td>
+                            <td>사람이 변하는 곳, 교회 (휴스턴 서울교회 연수 보고서) (4)</td>
+                            <td class="text-center">이태형</td>
+                            <td class="text-center">2026.04.21</td>
+                            <td class="text-center">145</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">3641</td>
+                            <td>휴스턴 서울교회 연수보고 (4)</td>
+                            <td class="text-center">박정민</td>
+                            <td class="text-center">2026.04.17</td>
+                            <td class="text-center">193</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">3640</td>
+                            <td>가정교회 스피릿이 일상이 된 교회(휴스턴서울교회 연수보고서) (4)</td>
+                            <td class="text-center">문충현</td>
+                            <td class="text-center">2026.04.16</td>
+                            <td class="text-center">163</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">3639</td>
+                            <td>세 축 네 기둥이 실제인 교회 (휴스턴 서울교회 연수 보고서) (2)</td>
+                            <td class="text-center">이상성</td>
+                            <td class="text-center">2026.04.07</td>
+                            <td class="text-center">286</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">3638</td>
+                            <td>하나님이 기뻐하시는 교회 (연수보고) (5)</td>
+                            <td class="text-center">전상출</td>
+                            <td class="text-center">2026.04.05</td>
+                            <td class="text-center">275</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            <!-- Pagination Placeholder -->
+
+            <!-- Pagination -->
             <nav class="mt-3">
                 <ul class="pagination pagination-sm justify-content-center">
                     <li class="page-item active"><a class="page-link" href="#">1</a></li>
                     <li class="page-item"><a class="page-link" href="#">2</a></li>
                     <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">...10</a></li>
                 </ul>
             </nav>
-        </div>
+        </main>
     </div>
-</main>
+</div>
 
 <footer class="bg-white border-top py-5 text-center mt-5">
     <div class="container">
