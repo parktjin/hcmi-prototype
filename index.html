@@ -7,9 +7,9 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* This ensures all carousel images are the exact same height on all devices */
+        /* Uniform size fix for carousel images */
         .carousel-item img {
-            height: 200px; /* Adjust this height as you prefer */
+            height: 200px;
             object-fit: cover;
             width: 100%;
         }
@@ -92,10 +92,10 @@
 </nav>
 
 <main class="container py-4">
-    <!-- Main Top Banner -->
+    <!-- Main Top Banner Placeholder -->
     <div class="row mb-4 text-center">
         <div class="col-12">
-            <img src="[LINK IMAGE HERE: http://www.housechurchministries.org/images/main/main_img.gif]" class="img-fluid border" alt="Main Banner">
+            <img src="[LINK IMAGE HERE: main_banner.gif]" class="img-fluid border" alt="Main Banner">
         </div>
     </div>
 
@@ -179,25 +179,28 @@
             </div>
         </div>
 
-        <!-- 2. LEFT COLUMN (Order 2 on Mobile, 1 on Desktop) -->
+        <!-- 2. LEFT COLUMN (Order 2 on Mobile) -->
         <div class="col-lg-3 order-2 order-lg-1">
             
-            <!-- Side Banner Carousel (Uniform Size Fix) -->
+            <!-- Side Banner Carousel -->
             <div id="sideBannerCarousel" class="carousel slide mb-3 border" data-bs-ride="carousel">
                 <div class="carousel-inner">
+                    <!-- Image 1 -->
                     <div class="carousel-item active" data-bs-interval="5000">
                         <a href="http://joam.org" target="_blank">
-                            <img src="[LINK IMAGE HERE: http://www.housechurchministries.org/upload_data/bannerdata/layman_936.jpg]" class="d-block w-100" alt="Slide 1">
+                            <img src="[LINK IMAGE HERE: car1.jpg]" class="d-block w-100" alt="평신도 세미나">
                         </a>
                     </div>
+                    <!-- Image 2 -->
                     <div class="carousel-item" data-bs-interval="5000">
                         <a href="https://info.housechurchministries.org/seminar/01.html" target="_blank">
-                            <img src="[LINK IMAGE HERE: http://www.housechurchministries.org/upload_data/bannerdata/retreat_mj_51.jpg]" class="d-block w-100" alt="Slide 2">
+                            <img src="[LINK IMAGE HERE: car2.jpg]" class="d-block w-100" alt="목회자 컨퍼런스">
                         </a>
                     </div>
+                    <!-- Image 3 -->
                     <div class="carousel-item" data-bs-interval="5000">
                         <a href="https://gasawon.hcmcampus.org/" target="_blank">
-                            <img src="[LINK IMAGE HERE: http://www.housechurchministries.org/upload_data/bannerdata/%EA%B0%80%EC%82%AC%EC%9B%90-%EC%BA%A0%ED%8D%BC%EC%8A%A4.jpg]" class="d-block w-100" alt="Slide 3">
+                            <img src="[LINK IMAGE HERE: car3.jpg]" class="d-block w-100" alt="가사원 캠퍼스">
                         </a>
                     </div>
                 </div>
@@ -212,36 +215,36 @@
             <div class="card mb-3">
                 <div class="card-header small fw-bold">목회자를 위한 세미나</div>
                 <div class="list-group list-group-flush">
-                    <a href="#" class="list-group-item py-1 small">제339차 알마타중앙...</a>
-                    <a href="#" class="list-group-item py-1 small">제340차 스리랑카 서머나...</a>
-                    <a href="#" class="list-group-item py-1 small">[인니 꺼둥문두] 세미나...</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none">제339차 알마타중앙...</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none">제340차 스리랑카...</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none">[인니 꺼둥문두]...</a>
                 </div>
             </div>
 
             <div class="card mb-3">
                 <div class="card-header small fw-bold">평신도를 위한 세미나</div>
                 <div class="list-group list-group-flush">
-                    <a href="#" class="list-group-item py-1 small">지방 세미나 참석 권장</a>
-                    <a href="#" class="list-group-item py-1 small">제930차 토론토 목민</a>
-                    <a href="#" class="list-group-item py-1 small">제931차 전주 목원</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none">지방 세미나 참석 권장</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none">제930차 토론토 목민</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none">제931차 전주 목원</a>
                 </div>
             </div>
 
             <div class="card mb-3">
                 <div class="card-header small fw-bold">지역별 컨퍼런스</div>
                 <div class="list-group list-group-flush">
-                    <a href="#" class="list-group-item py-1 small">컨퍼런스 삶 공부 내용</a>
-                    <a href="#" class="list-group-item py-1 small">제141차 수도권남부초원</a>
-                    <a href="#" class="list-group-item py-1 small">제142차 전북초원</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none">컨퍼런스 삶 공부 내용</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none">제141차 수도권남부</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none">제142차 전북초원</a>
                 </div>
             </div>
 
             <div class="card mb-3">
                 <div class="card-header small fw-bold">목자 컨퍼런스 및 연수</div>
                 <div class="list-group list-group-flush">
-                    <a href="#" class="list-group-item py-1 small">제60차 인니 서부자바</a>
-                    <a href="#" class="list-group-item py-1 small">제51차 판교.제주초원</a>
-                    <a href="#" class="list-group-item py-1 small">토론토초원 연수</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none">제60차 인니 서부자바</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none">제51차 판교.제주</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none">토론토초원 연수</a>
                 </div>
             </div>
         </div>
@@ -255,7 +258,7 @@
                     <div class="list-group-item small"><small class="text-muted">620</small> "목양의 본질" &lt;5.7.2026&gt;</div>
                     <div class="list-group-item small"><small class="text-muted">619</small> "없어야 할 청빙위원회" (5)</div>
                     <div class="list-group-item small"><small class="text-muted">618</small> "VIP가 초원지기로..." (5)</div>
-                    <div class="list-group-item small"><small class="text-muted">617</small> "가정교회를 잘 정착..." (4)</div>
+                    <div class="list-group-item small"><small class="text-muted">617</small> "가정교회를 정착시키면..." (4)</div>
                     <div class="list-group-item small"><small class="text-muted">616</small> "가정교회의 축복" (13)</div>
                     <div class="list-group-item small"><small class="text-muted">615</small> "될 일을 먼저 생각..." (11)</div>
                 </div>
@@ -269,27 +272,27 @@
                     <div class="list-group-item small"><span class="badge bg-success">교역자</span> 미국 얼바인...</div>
                     <div class="list-group-item small"><span class="badge bg-success">교역자</span> 청소년부 사역자...</div>
                     <div class="list-group-item small"><span class="badge bg-success">교역자</span> 안양북부교회...</div>
-                    <div class="list-group-item small"><span class="badge bg-success">교역자</span> [추가모집] 수원...</div>
+                    <div class="list-group-item small"><span class="badge bg-success">교역자</span> [추가] 수원...</div>
                     <div class="list-group-item small"><span class="badge bg-success">교역자</span> 서대구교회...</div>
                 </div>
             </div>
 
+            <!-- Side Banner Placeholder -->
             <div class="text-center mb-4">
-                <a href="http://hc360.ch360.org/" target="_blank">
-                    <img src="[LINK IMAGE HERE: http://www.housechurchministries.org/images/main/right_banner03.gif]" class="img-fluid border" alt="Side Banner">
-                </a>
+                <img src="[LINK IMAGE HERE: right_banner.gif]" class="img-fluid border" alt="Side Banner">
             </div>
         </div>
     </div>
 </main>
 
-<footer class="bg-white border-top py-5 text-center">
+<footer class="bg-white border-top py-5 text-center mt-4">
     <div class="container">
-        <img src="[LINK IMAGE HERE: http://www.housechurchministries.org/images/common/main_copy.gif]" class="img-fluid mb-2" alt="Footer Logo">
+        <img src="[LINK IMAGE HERE: footer_copy.gif]" class="img-fluid mb-2" alt="Footer Logo">
         <p class="text-muted small mb-0">Copyright © House Church Ministries. All Rights Reserved.</p>
     </div>
 </footer>
 
+<!-- Bootstrap 5 JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
