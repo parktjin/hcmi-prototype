@@ -7,18 +7,17 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Uniform size fix for carousel images - Increased height for 'Full' look */
+        /* This ensures that images stay at their natural ratio. */
+        /* Because they share the same ratio, width: 100% makes them identical in height. */
         .carousel-item img {
-            height: 450px; /* Increased from 200px for a more prominent, full display */
-            object-fit: cover; /* Ensures images fill the area without stretching */
             width: 100%;
+            height: auto;
+            display: block;
         }
-
-        /* Small adjustments for mobile responsiveness */
-        @media (max-width: 768px) {
-            .carousel-item img {
-                height: 300px; /* Slightly shorter on mobile but still uniform */
-            }
+        
+        /* Optional: Ensures the carousel container doesn't "jump" if images are a few pixels off */
+        .carousel-inner {
+            background-color: #fff;
         }
     </style>
 </head>
@@ -113,11 +112,11 @@
             <div class="card mb-4">
                 <div class="card-header fw-bold">가사원 공지사항</div>
                 <div class="list-group list-group-flush">
-                    <div class="list-group-item small"><span class="text-muted me-2">2023-07-29</span> <strong>국제가사원 회원이 되어 주세요.</strong></div>
-                    <div class="list-group-item small"><span class="text-muted me-2">2026-04-24</span> Emmaus Presbyterian Church(Don Lee) 회원... <span class="badge bg-primary">4</span></div>
-                    <div class="list-group-item small"><span class="text-muted me-2">2026-04-08</span> 울산중구 대현교회(유영민 목사) 회원 등... (13)</div>
-                    <div class="list-group-item small"><span class="text-muted me-2">2026-03-19</span> 한국가정교회사역원 강단대리설교자 지침서</div>
-                    <div class="list-group-item small"><span class="text-muted me-2">2026-03-14</span> 목자 목녀를 위한 1일 특강 안내 (7)</div>
+                    <div class="list-group-item small text-truncate"><span class="text-muted me-2">2023-07-29</span> <strong>국제가사원 회원이 되어 주세요.</strong></div>
+                    <div class="list-group-item small text-truncate"><span class="text-muted me-2">2026-04-24</span> Emmaus Presbyterian Church(Don Lee) 회원... <span class="badge bg-primary">4</span></div>
+                    <div class="list-group-item small text-truncate"><span class="text-muted me-2">2026-04-08</span> 울산중구 대현교회(유영민 목사) 회원 등... (13)</div>
+                    <div class="list-group-item small text-truncate"><span class="text-muted me-2">2026-03-19</span> 한국가정교회사역원 강단대리설교자 지침서</div>
+                    <div class="list-group-item small text-truncate"><span class="text-muted me-2">2026-03-14</span> 목자 목녀를 위한 1일 특강 안내 (7)</div>
                 </div>
             </div>
 
@@ -138,31 +137,31 @@
                 <div class="card-header fw-bold">가정교회 토론방</div>
                 <div class="list-group list-group-flush">
                     <div class="list-group-item d-flex justify-content-between align-items-center">
-                        <span class="small"><span class="text-muted me-2">2026-04-28</span> ♥개척가정교회｜"가정교회를 이끌고 나...</span>
+                        <span class="text-truncate small"><span class="text-muted me-2">2026-04-28</span> ♥개척가정교회｜"가정교회를 이끌고 나...</span>
                         <span class="badge bg-secondary rounded-pill">21</span>
                     </div>
                     <div class="list-group-item d-flex justify-content-between align-items-center">
-                        <span class="small"><span class="text-muted me-2">2026-04-28</span> Reflection After Hosting House Church ...</span>
+                        <span class="text-truncate small"><span class="text-muted me-2">2026-04-28</span> Reflection After Hosting House Church ...</span>
                         <span class="badge bg-secondary rounded-pill">12</span>
                     </div>
                     <div class="list-group-item d-flex justify-content-between align-items-center">
-                        <span class="small"><span class="text-muted me-2">2026-04-24</span> 소문의 낙원 휴스턴서울교회(연수보고)</span>
+                        <span class="text-truncate small"><span class="text-muted me-2">2026-04-24</span> 소문의 낙원 휴스턴서울교회(연수보고)</span>
                         <span class="badge bg-secondary rounded-pill">3</span>
                     </div>
                     <div class="list-group-item d-flex justify-content-between align-items-center">
-                        <span class="small"><span class="text-muted me-2">2026-04-24</span> "꽃 피는 벤쿠버" 140차 북미 목회자 컨...</span>
+                        <span class="text-truncate small"><span class="text-muted me-2">2026-04-24</span> "꽃 피는 벤쿠버" 140차 북미 목회자 컨...</span>
                         <span class="badge bg-secondary rounded-pill">20</span>
                     </div>
                     <div class="list-group-item d-flex justify-content-between align-items-center">
-                        <span class="small"><span class="text-muted me-2">2026-04-22</span> (교회의 유익을 우선하는) 정면 돌파! 솔...</span>
+                        <span class="text-truncate small"><span class="text-muted me-2">2026-04-22</span> (교회의 유익을 우선하는) 정면 돌파! 솔...</span>
                         <span class="badge bg-secondary rounded-pill">9</span>
                     </div>
                     <div class="list-group-item d-flex justify-content-between align-items-center">
-                        <span class="small"><span class="text-muted me-2">2026-04-21</span> 사람이 변하는 곳, 교회 (휴스턴 서울교...</span>
+                        <span class="text-truncate small"><span class="text-muted me-2">2026-04-21</span> 사람이 변하는 곳, 교회 (휴스턴 서울교...</span>
                         <span class="badge bg-secondary rounded-pill">4</span>
                     </div>
                     <div class="list-group-item d-flex justify-content-between align-items-center">
-                        <span class="small"><span class="text-muted me-2">2026-04-17</span> 휴스턴 서울교회 연수보고</span>
+                        <span class="text-truncate small"><span class="text-muted me-2">2026-04-17</span> 휴스턴 서울교회 연수보고</span>
                         <span class="badge bg-secondary rounded-pill">4</span>
                     </div>
                 </div>
@@ -172,42 +171,42 @@
             <div class="card mb-4">
                 <div class="card-header fw-bold">나눔터</div>
                 <div class="list-group list-group-flush">
-                    <div class="list-group-item small"><span class="text-muted me-2">2026-05-08</span> 이제 함께 꿈꾸는 동역자로!(929차 평신... (1)</div>
-                    <div class="list-group-item small"><span class="text-muted me-2">2026-05-08</span> 여기 다음 세대를 위해 헌신한 사역자들... (1)</div>
-                    <div class="list-group-item small"><span class="text-muted me-2">2026-05-08</span> 가정교회에 대해 의심이 많은 사람이 929... (2)</div>
-                    <div class="list-group-item small"><span class="text-muted me-2">2026-05-08</span> “흩어져도 이어지는 영혼구원의 사명” ... (1)</div>
-                    <div class="list-group-item small"><span class="text-muted me-2">2026-05-07</span> "여름 사역 전 힐링 빌드업!" 경기중부지... (6)</div>
-                    <div class="list-group-item small"><span class="text-muted me-2">2026-05-06</span> 2026 제3회 인앤아웃 행사 후기 (1)</div>
-                    <div class="list-group-item small"><span class="text-muted me-2">2026-05-06</span> “목사님 또 뭐 시켜주실 겁니까? 못할게... (4)</div>
-                    <div class="list-group-item small"><span class="text-muted me-2">2026-05-05</span> 예수 그리스도의 사랑으로 한 줄에 꿰어... (5)</div>
-                    <div class="list-group-item small"><span class="text-muted me-2">2026-05-05</span> 연두가 연두를 만나 향기를 드러냈습니다... (3)</div>
-                    <div class="list-group-item small"><span class="text-muted me-2">2026-05-05</span> 제 11차 군사의 삶공부에 초대합니다.</div>
+                    <div class="list-group-item small text-truncate"><span class="text-muted me-2">2026-05-08</span> 이제 함께 꿈꾸는 동역자로!(929차 평신... (1)</div>
+                    <div class="list-group-item small text-truncate"><span class="text-muted me-2">2026-05-08</span> 여기 다음 세대를 위해 헌신한 사역자들... (1)</div>
+                    <div class="list-group-item small text-truncate"><span class="text-muted me-2">2026-05-08</span> 가정교회에 대해 의심이 많은 사람이 929... (2)</div>
+                    <div class="list-group-item small text-truncate"><span class="text-muted me-2">2026-05-08</span> “흩어져도 이어지는 영혼구원의 사명” ... (1)</div>
+                    <div class="list-group-item small text-truncate"><span class="text-muted me-2">2026-05-07</span> "여름 사역 전 힐링 빌드업!" 경기중부지... (6)</div>
+                    <div class="list-group-item small text-truncate"><span class="text-muted me-2">2026-05-06</span> 2026 제3회 인앤아웃 행사 후기 (1)</div>
+                    <div class="list-group-item small text-truncate"><span class="text-muted me-2">2026-05-06</span> “목사님 또 뭐 시켜주실 겁니까? 못할게... (4)</div>
+                    <div class="list-group-item small text-truncate"><span class="text-muted me-2">2026-05-05</span> 예수 그리스도의 사랑으로 한 줄에 꿰어... (5)</div>
+                    <div class="list-group-item small text-truncate"><span class="text-muted me-2">2026-05-05</span> 연두가 연두를 만나 향기를 드러냈습니다... (3)</div>
+                    <div class="list-group-item small text-truncate"><span class="text-muted me-2">2026-05-05</span> 제 11차 군사의 삶공부에 초대합니다.</div>
                 </div>
             </div>
         </div>
 
-        <!-- 2. LEFT COLUMN (Order 2 on Mobile) -->
+        <!-- 2. LEFT COLUMN (Order 2 on Mobile, 1 on Desktop) -->
         <div class="col-lg-3 order-2 order-lg-1">
             
-            <!-- Side Banner Carousel -->
-            <div id="sideBannerCarousel" class="carousel slide mb-3 border" data-bs-ride="carousel">
+            <!-- Side Banner Carousel (Auto-Rotating) -->
+            <div id="sideBannerCarousel" class="carousel slide mb-3 border shadow-sm" data-bs-ride="carousel">
                 <div class="carousel-inner">
                     <!-- Image 1 -->
                     <div class="carousel-item active" data-bs-interval="5000">
                         <a href="http://joam.org" target="_blank">
-                            <img src="car1.jpg" class="d-block w-100" alt="평신도 세미나">
+                            <img src="car1.jpg" alt="평신도 세미나">
                         </a>
                     </div>
                     <!-- Image 2 -->
                     <div class="carousel-item" data-bs-interval="5000">
                         <a href="https://info.housechurchministries.org/seminar/01.html" target="_blank">
-                            <img src="car2.jpg" class="d-block w-100" alt="목회자 컨퍼런스">
+                            <img src="car2.jpg" alt="목회자 컨퍼런스">
                         </a>
                     </div>
                     <!-- Image 3 -->
                     <div class="carousel-item" data-bs-interval="5000">
                         <a href="https://gasawon.hcmcampus.org/" target="_blank">
-                            <img src="car3.jpg" class="d-block w-100" alt="가사원 캠퍼스">
+                            <img src="car3.jpg" alt="가사원 캠퍼스">
                         </a>
                     </div>
                 </div>
@@ -219,39 +218,22 @@
                 <button class="btn btn-outline-secondary btn-sm" onclick="window.open('https://info.housechurchministries.org/seminar/21.html')">목회자 세미나 신청 안내</button>
             </div>
 
+            <!-- Seminar Links -->
             <div class="card mb-3">
                 <div class="card-header small fw-bold">목회자를 위한 세미나</div>
                 <div class="list-group list-group-flush">
-                    <a href="#" class="list-group-item py-1 small text-decoration-none">제339차 알마타중앙...</a>
-                    <a href="#" class="list-group-item py-1 small text-decoration-none">제340차 스리랑카...</a>
-                    <a href="#" class="list-group-item py-1 small text-decoration-none">[인니 꺼둥문두]...</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none text-dark">제339차 알마타중앙...</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none text-dark">제340차 스리랑카...</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none text-dark">[인니 꺼둥문두]...</a>
                 </div>
             </div>
 
             <div class="card mb-3">
                 <div class="card-header small fw-bold">평신도를 위한 세미나</div>
                 <div class="list-group list-group-flush">
-                    <a href="#" class="list-group-item py-1 small text-decoration-none">지방 세미나 참석 권장</a>
-                    <a href="#" class="list-group-item py-1 small text-decoration-none">제930차 토론토 목민</a>
-                    <a href="#" class="list-group-item py-1 small text-decoration-none">제931차 전주 목원</a>
-                </div>
-            </div>
-
-            <div class="card mb-3">
-                <div class="card-header small fw-bold">지역별 컨퍼런스</div>
-                <div class="list-group list-group-flush">
-                    <a href="#" class="list-group-item py-1 small text-decoration-none">컨퍼런스 삶 공부 내용</a>
-                    <a href="#" class="list-group-item py-1 small text-decoration-none">제141차 수도권남부</a>
-                    <a href="#" class="list-group-item py-1 small text-decoration-none">제142차 전북초원</a>
-                </div>
-            </div>
-
-            <div class="card mb-3">
-                <div class="card-header small fw-bold">목자 컨퍼런스 및 연수</div>
-                <div class="list-group list-group-flush">
-                    <a href="#" class="list-group-item py-1 small text-decoration-none">제60차 인니 서부자바</a>
-                    <a href="#" class="list-group-item py-1 small text-decoration-none">제51차 판교.제주</a>
-                    <a href="#" class="list-group-item py-1 small text-decoration-none">토론토초원 연수</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none text-dark">지방 세미나 참석 권장</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none text-dark">제930차 토론토 목민</a>
+                    <a href="#" class="list-group-item py-1 small text-decoration-none text-dark">제931차 전주 목원</a>
                 </div>
             </div>
         </div>
@@ -279,8 +261,6 @@
                     <div class="list-group-item small text-truncate"><span class="badge bg-success">교역자</span> 미국 얼바인...</div>
                     <div class="list-group-item small text-truncate"><span class="badge bg-success">교역자</span> 청소년부 사역자...</div>
                     <div class="list-group-item small text-truncate"><span class="badge bg-success">교역자</span> 안양북부교회...</div>
-                    <div class="list-group-item small text-truncate"><span class="badge bg-success">교역자</span> [추가] 수원...</div>
-                    <div class="list-group-item small text-truncate"><span class="badge bg-success">교역자</span> 서대구교회...</div>
                 </div>
             </div>
 
@@ -300,7 +280,6 @@
     </div>
 </footer>
 
-<!-- Bootstrap 5 JS Bundle -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
