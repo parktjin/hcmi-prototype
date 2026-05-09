@@ -7,61 +7,50 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background-color: #f8f9fa; }
-        .post-body img { max-width: 100%; height: auto; margin: 20px 0; border-radius: 0.375rem; }
-        .comment-row { border-bottom: 1px solid #dee2e6; padding: 1rem 0; }
-        .sidebar-link { text-decoration: none; }
+        body { background-color: #f8f9fa; font-family: "맑은 고딕", "Malgun Gothic", sans-serif; }
+        .post-body-content img { max-width: 100%; height: auto; display: block; margin: 20px auto; }
+        .comment-row { padding: 15px; border-bottom: 1px solid #dee2e6; font-size: 0.9rem; }
+        .edit-icon { color: #00008b; cursor: pointer; font-size: 0.8rem; margin-left: 5px; }
     </style>
 </head>
 <body>
 
-<!-- Navbar (Same as Index) -->
-<nav class="navbar navbar-expand-xl navbar-dark bg-dark shadow-sm">
+<!-- Navbar (Matching Index) -->
+<nav class="navbar navbar-expand-xl navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="index.html">가사원</a>
+        <a class="navbar-brand" href="index.html">가사원</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Introduction</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">What is House Church?</a></li>
-                        <li><a class="dropdown-item" href="#">Mission</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Seminars & Events</a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Calendar</a></li>
-                        <li><a class="dropdown-item" href="#">Seminars</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#">Shepherds' Square</a></li>
-                <li class="nav-item"><a class="nav-link active" href="#">Counseling & Sharing</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Resources</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">가정교회사역원소개</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">세미나 및 행사</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">목자들의광장</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">상담실&나눔터</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">자료실</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">네트워크</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
-<div class="container py-4">
+<main class="container py-4">
     <!-- Static Header Image (Root Level) -->
     <div class="row mb-4">
-        <div class="col-12">
-            <img src="community_flash_img.jpg" class="img-fluid rounded shadow-sm w-100" alt="Community Header">
+        <div class="col-12 text-center">
+            <img src="community_flash_img.jpg" class="img-fluid border rounded shadow-sm w-100" alt="Community Header">
         </div>
     </div>
 
     <div class="row">
-        <!-- Sidebar (Col 3) -->
+        <!-- Sidebar Menu -->
         <aside class="col-lg-3 mb-4">
-            <div class="card">
-                <div class="card-header bg-secondary text-white fw-bold">상담실 & 나눔터</div>
+            <div class="card shadow-sm">
+                <div class="card-header bg-light fw-bold text-center">상담실 & 나눔터</div>
                 <div class="list-group list-group-flush">
-                    <a href="#" class="list-group-item list-group-item-action fw-bold active">가정교회 토론방</a>
+                    <a href="#" class="list-group-item list-group-item-action active">가정교회 토론방</a>
                     <a href="#" class="list-group-item list-group-item-action">구인/구직 게시판</a>
                     <a href="#" class="list-group-item list-group-item-action">개척 가정교회 나눔방</a>
                     <a href="#" class="list-group-item list-group-item-action">나눔터</a>
@@ -70,209 +59,207 @@
             </div>
         </aside>
 
-        <!-- Main Content (Col 9) -->
-        <main class="col-lg-9">
-            <!-- Article Area -->
-            <div class="card mb-4 shadow-sm">
-                <div class="card-header bg-light">
+        <!-- Main Content Area -->
+        <div class="col-lg-9">
+            <!-- Article Card -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-light py-3">
                     <h5 class="mb-0 fw-bold">Reflection After Hosting House Church Seminar for Lay Leaders - 평신도 세미나 주최 후 소감문</h5>
                 </div>
-                <div class="card-body">
-                    <!-- Meta info -->
-                    <div class="row border-bottom pb-2 mb-4 small text-muted">
+                <div class="card-body px-4">
+                    <!-- Meta Info -->
+                    <div class="row small text-muted border-bottom pb-2 mb-4">
                         <div class="col-md-4"><strong>작성자:</strong> 김영수</div>
                         <div class="col-md-4 text-center"><strong>날짜:</strong> 2026-04-28 14:57:41</div>
                         <div class="col-md-4 text-end"><strong>조회:</strong> 195 | <strong>추천:</strong> 5</div>
                     </div>
 
-                    <!-- All Post Content -->
-                    <div class="post-body fs-5">
-                        <p>We are located in a small city called San Luis Obispo in California, with a population of about 50,000 and a nearby university. Our church has been practicing house church ministry for the past 12 years. Currently, we have 14 English-speaking house churches and 2 Korean-speaking house churches. I personally came to faith in this church during my college years, and I have been serving as the pastor since 2000, leading both congregations.</p>
-                        
-                        <div class="text-center"><img src="/upload_data/board/b24/20260429071411957.jpeg" alt="Image 1"></div>
-
-                        <p>We were truly blessed to host our very first Lay Leaders Seminar from April 10–12. As a church, we have committed to becoming a <strong>resource church</strong> for house church ministry, and this seminar was a significant step toward fulfilling that mission in North America. A total of 24 participants joined us—3 from New Jersey, 6 from Houston, and the rest from various parts of California.</p>
-                        
-                        <div class="text-center"><img src="/upload_data/board/b24/20260429071454360.jpeg" alt="Image 2"></div>
-
-                        <p>Preparing for the seminar was both challenging and rewarding. We deep-cleaned our church campus to prepare spaces for teaching and meals, and many of our members opened their homes to host participants. As I prepared the teaching materials, I was also personally challenged, realizing areas where we as a church can continue to grow—for example, ensuring that each house church is intentionally praying for, investing in, and inviting at least five VIPs.</p>
-
-                        <div class="text-center"><img src="/upload_data/board/b24/20260429071615850.jpeg" alt="Image 3"></div>
-
-                        <p>The seminar itself was a great blessing. We received tremendous support and guidance from New Life Fellowship during the preparation process, and we were able to follow what we had learned. Our entire church came together to serve, and many sacrificed greatly. Some even picked up participants at 2 a.m., doing everything they could to provide excellent hospitality.</p>
-
-                        <div class="text-center"><img src="/upload_data/board/b24/20260429071654408.jpeg" alt="Image 4"></div>
-
-                        <p>We received many encouraging comments from participants, including remarks such as, <em>“Did you hire servers? They are so professional.”</em> Our goal was to honor the participants—many of whom are current or future shepherds—and to provide them with a meaningful and encouraging experience as they learned about house church ministry.</p>
-
-                        <div class="text-center">
-                            <img src="/upload_data/board/b24/20260429071808408.jpeg" alt="Image 5">
-                            <img src="/upload_data/board/b24/20260429071842366.jpeg" alt="Image 6">
-                        </div>
-
-                        <p>We are currently collecting stories and feedback from both participants and our church members as we reflect on this experience and consider how we can improve for future seminars. Above all, we are grateful to God for allowing us to be used in this way.</p>
-
-                        <div class="text-center">
-                            <img src="/upload_data/board/b24/20260429071915371.jpeg" alt="Image 7">
-                            <p class="small text-muted">God showed us a rainbow, too.</p>
-                        </div>
-
-                        <hr class="my-5">
-
-                        <!-- Korean Content -->
-                        <div class="korean-text" style="font-family: 'Batang', serif;">
-                            <p>저희 교회는 캘리포니아의 San Luis Obispo라는 작은 도시에 위치해 있으며, 약 5만 명의 인구와 인근에 대학교가 있는 지역입니다. 저희 교회는 지난 12년 동안 가정교회 사역을 해오고 있으며, 현재 영어권 가정교회 14개와 한국어권 가정교회 2개가 있습니다.</p>
-                            <p>이번 4월 10일부터 12일까지 저희 교회에서 처음으로 평신도 세미나를 주최하게 된 것은 큰 은혜와 축복이었습니다. 저희 교회는 가정교회 사역을 위한 <strong>자원교회</strong>가 되는 것을 하나의 사명으로 품고 있는데, 이번 세미나는 북미 지역에서 그 사명을 감당하기 위한 중요한 첫걸음이었습니다.</p>
-                            <p>세미나를 준비하는 과정은 쉽지 않았지만 동시에 큰 은혜의 시간이었습니다. 무엇보다 교회 전체가 하나 되어 섬겼고, 많은 분들이 헌신적으로 수고해 주셨습니다. 참가자들로부터 많은 격려의 피드백도 받았습니다. 저희의 목표는 참가자들을 존중하고 귀하게 섬기며, 은혜로운 시간을 경험하도록 돕는 것이었습니다.</p>
-                        </div>
+                    <!-- Post Body (Exact Content from Source) -->
+                    <div class="post-body-content">
+                        <p style="margin: 0in 0in 6pt; line-height: 20.5333px; font-size: 14pt; font-family: Aptos, sans-serif;">We are located in a small city called San Luis Obispo in California, with a population of about 50,000 and a nearby university. Our church has been practicing house church ministry for the past 12 years. Currently, we have 14 English-speaking house churches and 2 Korean-speaking house churches. I personally came to faith in this church during my college years, and I have been serving as the pastor since 2000, leading both congregations.</p>
+                        <img src="/upload_data/board/b24/20260429071411957.jpeg" alt="Seminar Image 1">
+                        <p style="margin: 0in 0in 6pt; line-height: 20.5333px; font-size: 14pt; font-family: Aptos, sans-serif;">We were truly blessed to host our very first Lay Leaders Seminar from April 10–12. As a church, we have committed to becoming a <b>resource church</b> for house church ministry, and this seminar was a significant step toward fulfilling that mission in North America. A total of 24 participants joined us—3 from New Jersey, 6 from Houston, and the rest from various parts of California.</p>
+                        <img src="/upload_data/board/b24/20260429071454360.jpeg" alt="Seminar Image 2">
+                        <p style="margin: 0in 0in 6pt; line-height: 20.5333px; font-size: 14pt; font-family: Aptos, sans-serif;">Preparing for the seminar was both challenging and rewarding. We deep-cleaned our church campus to prepare spaces for teaching and meals, and many of our members opened their homes to host participants. As I prepared the teaching materials, I was also personally challenged, realizing areas where we as a church can continue to grow—for example, ensuring that each house church is intentionally praying for, investing in, and inviting at least five VIPs.</p>
+                        <img src="/upload_data/board/b24/20260429071615850.jpeg" alt="Seminar Image 3">
+                        <p style="margin: 0in 0in 6pt; line-height: 20.5333px; font-size: 14pt; font-family: Aptos, sans-serif;">The seminar itself was a great blessing. We received tremendous support and guidance from New Life Fellowship during the preparation process, and we were able to follow what we had learned. Our entire church came together to serve, and many sacrificed greatly. Some even picked up participants at 2 a.m., doing everything they could to provide excellent hospitality.</p>
+                        <img src="/upload_data/board/b24/20260429071654408.jpeg" alt="Seminar Image 4">
+                        <p style="margin: 0in 0in 6pt; line-height: 20.5333px; font-size: 14pt; font-family: Aptos, sans-serif;">We received many encouraging comments from participants, including remarks such as, <i>“Did you hire servers? They are so professional.”</i> Our goal was to honor the participants—many of whom are current or future shepherds—and to provide them with a meaningful and encouraging experience as they learned about house church ministry.</p>
+                        <img src="/upload_data/board/b24/20260429071808408.jpeg" alt="Seminar Image 5">
+                        <img src="/upload_data/board/b24/20260429071842366.jpeg" alt="Seminar Image 6">
+                        <p style="margin: 0in 0in 6pt; line-height: 20.5333px; font-size: 14pt; font-family: Aptos, sans-serif;">We are currently collecting stories and feedback from both participants and our church members as we reflect on this experience and consider how we can improve for future seminars. We are deeply thankful that we were able to bless these 24 participants, and we pray that this experience will not only strengthen their ministries but also help our own house church ministry grow in health—engaging more VIPs, seeing more people come to Christ, and experiencing both spiritual and numerical growth.</p>
+                        <p style="margin: 0in 0in 6pt; line-height: 20.5333px; font-size: 14pt; font-family: Aptos, sans-serif;">Above all, we are grateful to God for allowing us to be used in this way. We thank our shepherds who lovingly served and modeled house church life, and all the members who contributed through decorating, cooking, serving, transportation, and countless unseen acts of service.</p>
+                        <p style="margin: 0in 0in 6pt; line-height: 20.5333px; font-size: 14pt; font-family: Aptos, sans-serif;">We pray that our next seminar will be even more honoring to God.</p>
+                        <img src="/upload_data/board/b24/20260429071915371.jpeg" alt="Rainbow Image">
+                        <span style="font-size: 12pt;">God showed us a rainbow, too.</span>
+                        <p style="margin: 0in 0in 6pt; line-height: 20.5333px; font-size: 14pt; font-family: Aptos, sans-serif;"><span lang="KO" style="font-family: Batang, serif;">저희</span> <span lang="KO" style="font-family: Batang, serif;">교회는</span> <span lang="KO" style="font-family: Batang, serif;">캘리포니아의</span> San Luis Obispo<span lang="KO" style="font-family: Batang, serif;">라는</span> <span lang="KO" style="font-family: Batang, serif;">작은</span> <span lang="KO" style="font-family: Batang, serif;">도시에</span> <span lang="KO" style="font-family: Batang, serif;">위치해</span> <span lang="KO" style="font-family: Batang, serif;">있으며</span>, <span lang="KO" style="font-family: Batang, serif;">약</span> 5<span lang="KO" style="font-family: Batang, serif;">만</span> <span lang="KO" style="font-family: Batang, serif;">명의</span> <span lang="KO" style="font-family: Batang, serif;">인구와</span> <span lang="KO" style="font-family: Batang, serif;">인근에</span> <span lang="KO" style="font-family: Batang, serif;">대학교가</span> <span lang="KO" style="font-family: Batang, serif;">있는</span> <span lang="KO" style="font-family: Batang, serif;">지역입니다</span>. <span lang="KO" style="font-family: Batang, serif;">저희</span> <span lang="KO" style="font-family: Batang, serif;">교회는</span> <span lang="KO" style="font-family: Batang, serif;">지난</span> 12<span lang="KO" style="font-family: Batang, serif;">년</span> <span lang="KO" style="font-family: Batang, serif;">동안</span> <span lang="KO" style="font-family: Batang, serif;">가정교회</span> <span lang="KO" style="font-family: Batang, serif;">사역을</span> <span lang="KO" style="font-family: Batang, serif;">해오고</span> <span lang="KO" style="font-family: Batang, serif;">있으며</span>, <span lang="KO" style="font-family: Batang, serif;">현재</span> <span lang="KO" style="font-family: Batang, serif;">영어권</span> <span lang="KO" style="font-family: Batang, serif;">가정교회</span> 14<span lang="KO" style="font-family: Batang, serif;">개와</span> <span lang="KO" style="font-family: Batang, serif;">한국어권</span> <span lang="KO" style="font-family: Batang, serif;">가정교회</span> 2<span lang="KO" style="font-family: Batang, serif;">개가</span> <span lang="KO" style="font-family: Batang, serif;">있습니다</span>. <span lang="KO" style="font-family: Batang, serif;">저는</span> <span lang="KO" style="font-family: Batang, serif;">대학</span> <span lang="KO" style="font-family: Batang, serif;">시절</span> <span lang="KO" style="font-family: Batang, serif;">이</span> <span lang="KO" style="font-family: Batang, serif;">교회에서</span> <span lang="KO" style="font-family: Batang, serif;">예수님을</span> <span lang="KO" style="font-family: Batang, serif;">영접하게</span> <span lang="KO" style="font-family: Batang, serif;">되었고</span>, 2000<span lang="KO" style="font-family: Batang, serif;">년부터</span> <span lang="KO" style="font-family: Batang, serif;">목회자로</span> <span lang="KO" style="font-family: Batang, serif;">섬기며</span> <span lang="KO" style="font-family: Batang, serif;">두</span> <span lang="KO" style="font-family: Batang, serif;">회중을</span> <span lang="KO" style="font-family: Batang, serif;">함께</span> <span lang="KO" style="font-family: Batang, serif;">인도하고</span> <span lang="KO" style="font-family: Batang, serif;">있습니다</span>.</p>
+                        <p style="margin: 0in 0in 6pt; line-height: 20.5333px; font-size: 14pt; font-family: Aptos, sans-serif;"><span lang="KO" style="font-family: Batang, serif;">이번</span> 4<span lang="KO" style="font-family: Batang, serif;">월</span> 10<span lang="KO" style="font-family: Batang, serif;">일부터</span> 12<span lang="KO" style="font-family: Batang, serif;">일까지</span> <span lang="KO" style="font-family: Batang, serif;">저희</span> <span lang="KO" style="font-family: Batang, serif;">교회에서</span> <span lang="KO" style="font-family: Batang, serif;">처음으로</span> <span lang="KO" style="font-family: Batang, serif;">평신도</span> <span lang="KO" style="font-family: Batang, serif;">세미나를</span> <span lang="KO" style="font-family: Batang, serif;">주최하게</span> <span lang="KO" style="font-family: Batang, serif;">된</span> <span lang="KO" style="font-family: Batang, serif;">것은</span> <span lang="KO" style="font-family: Batang, serif;">큰</span> <span lang="KO" style="font-family: Batang, serif;">은혜와</span> <span lang="KO" style="font-family: Batang, serif;">축복이었습니다</span>. <span lang="KO" style="font-family: Batang, serif;">저희</span> <span lang="KO" style="font-family: Batang, serif;">교회는</span> <span lang="KO" style="font-family: Batang, serif;">가정교회</span> <span lang="KO" style="font-family: Batang, serif;">사역을</span> <span lang="KO" style="font-family: Batang, serif;">위한</span> <b><span lang="KO" style="font-family: Batang, serif;">자원교회</span></b><span lang="KO" style="font-family: Batang, serif;">가</span> <span lang="KO" style="font-family: Batang, serif;">되는</span> <span lang="KO" style="font-family: Batang, serif;">것을</span> <span lang="KO" style="font-family: Batang, serif;">하나의</span> <span lang="KO" style="font-family: Batang, serif;">사명으로</span> <span lang="KO" style="font-family: Batang, serif;">품고</span> <span lang="KO" style="font-family: Batang, serif;">있는데</span>, <span lang="KO" style="font-family: Batang, serif;">이번</span> <span lang="KO" style="font-family: Batang, serif;">세미나는</span> <span lang="KO" style="font-family: Batang, serif;">북미</span> <span lang="KO" style="font-family: Batang, serif;">지역에서</span> <span lang="KO" style="font-family: Batang, serif;">그</span> <span lang="KO" style="font-family: Batang, serif;">사명을</span> <span lang="KO" style="font-family: Batang, serif;">감당하기</span> <span lang="KO" style="font-family: Batang, serif;">위한</span> <span lang="KO" style="font-family: Batang, serif;">중요한</span> <span lang="KO" style="font-family: Batang, serif;">첫걸음이었습니다</span>. <span lang="KO" style="font-family: Batang, serif;">총</span> 24<span lang="KO" style="font-family: Batang, serif;">명의</span> <span lang="KO" style="font-family: Batang, serif;">참가자들이</span> <span lang="KO" style="font-family: Batang, serif;">함께하였으며</span>, <span lang="KO" style="font-family: Batang, serif;">뉴저지에서</span> 3<span lang="KO" style="font-family: Batang, serif;">명</span>, <span lang="KO" style="font-family: Batang, serif;">휴스턴에서</span> 6<span lang="KO" style="font-family: Batang, serif;">명</span>, <span lang="KO" style="font-family: Batang, serif;">그리고</span> <span lang="KO" style="font-family: Batang, serif;">나머지는</span> <span lang="KO" style="font-family: Batang, serif;">캘리포니아</span> <span lang="KO" style="font-family: Batang, serif;">여러</span> <span lang="KO" style="font-family: Batang, serif;">지역에서</span> <span lang="KO" style="font-family: Batang, serif;">오셨습니다</span>.</p>
+                        <p style="margin: 0in 0in 6pt; line-height: 20.5333px; font-size: 14pt; font-family: Aptos, sans-serif;"><span lang="KO" style="font-family: Batang, serif;">세미나를</span> <span lang="KO" style="font-family: Batang, serif;">준비하는</span> <span lang="KO" style="font-family: Batang, serif;">과정은</span> <span lang="KO" style="font-family: Batang, serif;">쉽지</span> <span lang="KO" style="font-family: Batang, serif;">않았지만</span> <span lang="KO" style="font-family: Batang, serif;">동시에</span> <span lang="KO" style="font-family: Batang, serif;">큰</span> <span lang="KO" style="font-family: Batang, serif;">은혜의</span> <span lang="KO" style="font-family: Batang, serif;">시간이었습니다</span>. <span lang="KO" style="font-family: Batang, serif;">강의와</span> <span lang="KO" style="font-family: Batang, serif;">식사를</span> <span lang="KO" style="font-family: Batang, serif;">위해</span> <span lang="KO" style="font-family: Batang, serif;">교회</span> <span lang="KO" style="font-family: Batang, serif;">전체를</span> <span lang="KO" style="font-family: Batang, serif;">깨끗이</span> <span lang="KO" style="font-family: Batang, serif;">정리하고</span>, <span lang="KO" style="font-family: Batang, serif;">여러</span> <span lang="KO" style="font-family: Batang, serif;">성도님들께서</span> <span lang="KO" style="font-family: Batang, serif;">자신의</span> <span lang="KO" style="font-family: Batang, serif;">집을</span> <span lang="KO" style="font-family: Batang, serif;">열어</span> <span lang="KO" style="font-family: Batang, serif;">참가자들을</span> <span lang="KO" style="font-family: Batang, serif;">섬겨</span> <span lang="KO" style="font-family: Batang, serif;">주셨습니다</span>. <span lang="KO" style="font-family: Batang, serif;">또한</span> <span lang="KO" style="font-family: Batang, serif;">강의</span> <span lang="KO" style="font-family: Batang, serif;">자료를</span> <span lang="KO" style="font-family: Batang, serif;">준비하면서</span> <span lang="KO" style="font-family: Batang, serif;">저</span> <span lang="KO" style="font-family: Batang, serif;">개인적으로도</span> <span lang="KO" style="font-family: Batang, serif;">많은</span> <span lang="KO" style="font-family: Batang, serif;">도전을</span> <span lang="KO" style="font-family: Batang, serif;">받았고</span>, <span lang="KO" style="font-family: Batang, serif;">우리</span> <span lang="KO" style="font-family: Batang, serif;">교회가</span> <span lang="KO" style="font-family: Batang, serif;">앞으로</span> <span lang="KO" style="font-family: Batang, serif;">더</span> <span lang="KO" style="font-family: Batang, serif;">보완해야</span> <span lang="KO" style="font-family: Batang, serif;">할</span> <span lang="KO" style="font-family: Batang, serif;">부분들을</span> <span lang="KO" style="font-family: Batang, serif;">돌아보게</span> <span lang="KO" style="font-family: Batang, serif;">되었습니다</span>. <span lang="KO" style="font-family: Batang, serif;">예를</span> <span lang="KO" style="font-family: Batang, serif;">들어</span>, <span lang="KO" style="font-family: Batang, serif;">각</span> <span lang="KO" style="font-family: Batang, serif;">가정교회가</span> <span lang="KO" style="font-family: Batang, serif;">최소</span> <span lang="KO" style="font-family: Batang, serif;">다섯</span> <span lang="KO" style="font-family: Batang, serif;">명의</span> VIP<span lang="KO" style="font-family: Batang, serif;">를</span> <span lang="KO" style="font-family: Batang, serif;">정해</span> <span lang="KO" style="font-family: Batang, serif;">놓고</span> <span lang="KO" style="font-family: Batang, serif;">기도하며</span>, <span lang="KO" style="font-family: Batang, serif;">섬기고</span>, <span lang="KO" style="font-family: Batang, serif;">초청하는</span> <span lang="KO" style="font-family: Batang, serif;">일에</span> <span lang="KO" style="font-family: Batang, serif;">더욱</span> <span lang="KO" style="font-family: Batang, serif;">집중해야</span> <span lang="KO" style="font-family: Batang, serif;">한다는</span> <span lang="KO" style="font-family: Batang, serif;">것을</span> <span lang="KO" style="font-family: Batang, serif;">다시</span> <span lang="KO" style="font-family: Batang, serif;">확인하게</span> <span lang="KO" style="font-family: Batang, serif;">되었습니다</span>.</p>
+                        <p style="margin: 0in 0in 6pt; line-height: 20.5333px; font-size: 14pt; font-family: Aptos, sans-serif;"><span lang="KO" style="font-family: Batang, serif;">세미나</span> <span lang="KO" style="font-family: Batang, serif;">자체도</span> <span lang="KO" style="font-family: Batang, serif;">큰</span> <span lang="KO" style="font-family: Batang, serif;">은혜</span> <span lang="KO" style="font-family: Batang, serif;">가운데</span> <span lang="KO" style="font-family: Batang, serif;">진행되었습니다</span>. <span lang="KO" style="font-family: Batang, serif;">준비</span> <span lang="KO" style="font-family: Batang, serif;">과정에서</span> New Life Fellowship<span lang="KO" style="font-family: Batang, serif;">의</span> <span lang="KO" style="font-family: Batang, serif;">도움과</span> <span lang="KO" style="font-family: Batang, serif;">지도를</span> <span lang="KO" style="font-family: Batang, serif;">많이</span> <span lang="KO" style="font-family: Batang, serif;">받았고</span>, <span lang="KO" style="font-family: Batang, serif;">배운</span> <span lang="KO" style="font-family: Batang, serif;">대로</span> <span lang="KO" style="font-family: Batang, serif;">잘</span> <span lang="KO" style="font-family: Batang, serif;">적용할</span> <span lang="KO" style="font-family: Batang, serif;">수</span> <span lang="KO" style="font-family: Batang, serif;">있었습니다</span>. <span lang="KO" style="font-family: Batang, serif;">무엇보다</span> <span lang="KO" style="font-family: Batang, serif;">교회</span> <span lang="KO" style="font-family: Batang, serif;">전체가</span> <span lang="KO" style="font-family: Batang, serif;">하나</span> <span lang="KO" style="font-family: Batang, serif;">되어</span> <span lang="KO" style="font-family: Batang, serif;">섬겼고</span>, <span lang="KO" style="font-family: Batang, serif;">많은</span> <span lang="KO" style="font-family: Batang, serif;">분들이</span> <span lang="KO" style="font-family: Batang, serif;">헌신적으로</span> <span lang="KO" style="font-family: Batang, serif;">수고해</span> <span lang="KO" style="font-family: Batang, serif;">주셨습니다</span>. <span lang="KO" style="font-family: Batang, serif;">어떤</span> <span lang="KO" style="font-family: Batang, serif;">분들은</span> <span lang="KO" style="font-family: Batang, serif;">새벽</span> 2<span lang="KO" style="font-family: Batang, serif;">시에</span> <span lang="KO" style="font-family: Batang, serif;">참가자들을</span> <span lang="KO" style="font-family: Batang, serif;">픽업하기도</span> <span lang="KO" style="font-family: Batang, serif;">하며</span>, <span lang="KO" style="font-family: Batang, serif;">끝까지</span> <span lang="KO" style="font-family: Batang, serif;">최선을</span> <span lang="KO" style="font-family: Batang, serif;">다해</span> <span lang="KO" style="font-family: Batang, serif;">섬겨</span> <span lang="KO" style="font-family: Batang, serif;">주셨습니다</span>.</p>
+                        <p style="margin: 0in 0in 6pt; line-height: 20.5333px; font-size: 14pt; font-family: Aptos, sans-serif;"><span lang="KO" style="font-family: Batang, serif;">참가자들로부터</span> <span lang="KO" style="font-family: Batang, serif;">많은</span> <span lang="KO" style="font-family: Batang, serif;">격려의</span> <span lang="KO" style="font-family: Batang, serif;">피드백도</span> <span lang="KO" style="font-family: Batang, serif;">받았습니다</span>. “<span lang="KO" style="font-family: Batang, serif;">서빙하시는</span> <span lang="KO" style="font-family: Batang, serif;">분들이</span> <span lang="KO" style="font-family: Batang, serif;">너무</span> <span lang="KO" style="font-family: Batang, serif;">전문적인데</span>, <span lang="KO" style="font-family: Batang, serif;">따로</span> <span lang="KO" style="font-family: Batang, serif;">고용하신</span> <span lang="KO" style="font-family: Batang, serif;">분들인가요</span>?”<span lang="KO" style="font-family: Batang, serif;">라는</span> <span lang="KO" style="font-family: Batang, serif;">말을</span> <span lang="KO" style="font-family: Batang, serif;">들을</span> <span lang="KO" style="font-family: Batang, serif;">정도로</span>, <span lang="KO" style="font-family: Batang, serif;">성도님들의</span> <span lang="KO" style="font-family: Batang, serif;">섬김이</span> <span lang="KO" style="font-family: Batang, serif;">인상적이었다고</span> <span lang="KO" style="font-family: Batang, serif;">합니다</span>. <span lang="KO" style="font-family: Batang, serif;">저희의</span> <span lang="KO" style="font-family: Batang, serif;">목표는</span> <span lang="KO" style="font-family: Batang, serif;">참가자들</span>, <span lang="KO" style="font-family: Batang, serif;">특히</span> <span lang="KO" style="font-family: Batang, serif;">목자</span>/<span lang="KO" style="font-family: Batang, serif;">목녀님들과</span> <span lang="KO" style="font-family: Batang, serif;">예비</span> <span lang="KO" style="font-family: Batang, serif;">목자</span>/<span lang="KO" style="font-family: Batang, serif;">목녀님들을</span> <span lang="KO" style="font-family: Batang, serif;">존중하고</span> <span lang="KO" style="font-family: Batang, serif;">귀하게</span> <span lang="KO" style="font-family: Batang, serif;">섬기며</span>, <span lang="KO" style="font-family: Batang, serif;">가정교회</span> <span lang="KO" style="font-family: Batang, serif;">사역을</span> <span lang="KO" style="font-family: Batang, serif;">배우는</span> <span lang="KO" style="font-family: Batang, serif;">가운데</span> <span lang="KO" style="font-family: Batang, serif;">의미</span> <span lang="KO" style="font-family: Batang, serif;">있고</span> <span lang="KO" style="font-family: Batang, serif;">은혜로운</span> <span lang="KO" style="font-family: Batang, serif;">시간을</span> <span lang="KO" style="font-family: Batang, serif;">경험하도록</span> <span lang="KO" style="font-family: Batang, serif;">돕는</span> <span lang="KO" style="font-family: Batang, serif;">것이었습니다</span>.</p>
+                        <p style="margin: 0in 0in 6pt; line-height: 20.5333px; font-size: 14pt; font-family: Aptos, sans-serif;"><span lang="KO" style="font-family: Batang, serif;">현재</span> <span lang="KO" style="font-family: Batang, serif;">저희는</span> <span lang="KO" style="font-family: Batang, serif;">참가자들과</span> <span lang="KO" style="font-family: Batang, serif;">성도님들의</span> <span lang="KO" style="font-family: Batang, serif;">간증과</span> <span lang="KO" style="font-family: Batang, serif;">피드백을</span> <span lang="KO" style="font-family: Batang, serif;">모으며</span>, <span lang="KO" style="font-family: Batang, serif;">이번</span> <span lang="KO" style="font-family: Batang, serif;">세미나를</span> <span lang="KO" style="font-family: Batang, serif;">돌아보고</span> <span lang="KO" style="font-family: Batang, serif;">다음</span> <span lang="KO" style="font-family: Batang, serif;">세미나를</span> <span lang="KO" style="font-family: Batang, serif;">어떻게</span> <span lang="KO" style="font-family: Batang, serif;">더</span> <span lang="KO" style="font-family: Batang, serif;">잘</span> <span lang="KO" style="font-family: Batang, serif;">준비할</span> <span lang="KO" style="font-family: Batang, serif;">수</span> <span lang="KO" style="font-family: Batang, serif;">있을지</span> <span lang="KO" style="font-family: Batang, serif;">고민하고</span> <span lang="KO" style="font-family: Batang, serif;">있습니다</span>. <span lang="KO" style="font-family: Batang, serif;">이번</span> <span lang="KO" style="font-family: Batang, serif;">세미나를</span> <span lang="KO" style="font-family: Batang, serif;">통해</span> 24<span lang="KO" style="font-family: Batang, serif;">명의</span> <span lang="KO" style="font-family: Batang, serif;">참가자들을</span> <span lang="KO" style="font-family: Batang, serif;">섬길</span> <span lang="KO" style="font-family: Batang, serif;">수</span> <span lang="KO" style="font-family: Batang, serif;">있었던</span> <span lang="KO" style="font-family: Batang, serif;">것을</span> <span lang="KO" style="font-family: Batang, serif;">감사하게</span> <span lang="KO" style="font-family: Batang, serif;">생각하며</span>, <span lang="KO" style="font-family: Batang, serif;">이</span> <span lang="KO" style="font-family: Batang, serif;">경험이</span> <span lang="KO" style="font-family: Batang, serif;">그분들의</span> <span lang="KO" style="font-family: Batang, serif;">사역에</span> <span lang="KO" style="font-family: Batang, serif;">도움이</span> <span lang="KO" style="font-family: Batang, serif;">될</span> <span lang="KO" style="font-family: Batang, serif;">뿐</span> <span lang="KO" style="font-family: Batang, serif;">아니라</span>, <span lang="KO" style="font-family: Batang, serif;">저희</span> <span lang="KO" style="font-family: Batang, serif;">교회의</span> <span lang="KO" style="font-family: Batang, serif;">가정교회</span> <span lang="KO" style="font-family: Batang, serif;">사역도</span> <span lang="KO" style="font-family: Batang, serif;">더욱</span> <span lang="KO" style="font-family: Batang, serif;">건강하게</span> <span lang="KO" style="font-family: Batang, serif;">성장하는</span> <span lang="KO" style="font-family: Batang, serif;">계기가</span> <span lang="KO" style="font-family: Batang, serif;">되기를</span> <span lang="KO" style="font-family: Batang, serif;">소망합니다</span>. <span lang="KO" style="font-family: Batang, serif;">더</span> <span lang="KO" style="font-family: Batang, serif;">많은</span> VIP<span lang="KO" style="font-family: Batang, serif;">들을</span> <span lang="KO" style="font-family: Batang, serif;">섬기고</span>, <span lang="KO" style="font-family: Batang, serif;">더</span> <span lang="KO" style="font-family: Batang, serif;">많은</span> <span lang="KO" style="font-family: Batang, serif;">영혼들이</span> <span lang="KO" style="font-family: Batang, serif;">예수님을</span> <span lang="KO" style="font-family: Batang, serif;">만나며</span>, <span lang="KO" style="font-family: Batang, serif;">영적</span>·<span lang="KO" style="font-family: Batang, serif;">수적</span> <span lang="KO" style="font-family: Batang, serif;">성장이</span> <span lang="KO" style="font-family: Batang, serif;">함께</span> <span lang="KO" style="font-family: Batang, serif;">일어나기를</span> <span lang="KO" style="font-family: Batang, serif;">기도합니다</span>.</p>
+                        <p style="margin: 0in 0in 6pt; line-height: 20.5333px; font-size: 14pt; font-family: Aptos, sans-serif;"><span lang="KO" style="font-family: Batang, serif;">무엇보다</span> <span lang="KO" style="font-family: Batang, serif;">저희를</span> <span lang="KO" style="font-family: Batang, serif;">사용해</span> <span lang="KO" style="font-family: Batang, serif;">주신</span> <span lang="KO" style="font-family: Batang, serif;">하나님께</span> <span lang="KO" style="font-family: Batang, serif;">모든</span> <span lang="KO" style="font-family: Batang, serif;">감사를</span> <span lang="KO" style="font-family: Batang, serif;">올려드립니다</span>. <span lang="KO" style="font-family: Batang, serif;">사랑으로</span> <span lang="KO" style="font-family: Batang, serif;">참가자들을</span> <span lang="KO" style="font-family: Batang, serif;">섬기고</span> <span lang="KO" style="font-family: Batang, serif;">가정교회의</span> <span lang="KO" style="font-family: Batang, serif;">모습을</span> <span lang="KO" style="font-family: Batang, serif;">잘</span> <span lang="KO" style="font-family: Batang, serif;">보여주신</span> <span lang="KO" style="font-family: Batang, serif;">목자</span>/<span lang="KO" style="font-family: Batang, serif;">목녀님들께</span> <span lang="KO" style="font-family: Batang, serif;">감사드리며</span>, <span lang="KO" style="font-family: Batang, serif;">데코레시션</span>, <span lang="KO" style="font-family: Batang, serif;">식사</span> <span lang="KO" style="font-family: Batang, serif;">준비</span>, <span lang="KO" style="font-family: Batang, serif;">서빙</span>, <span lang="KO" style="font-family: Batang, serif;">차량</span> <span lang="KO" style="font-family: Batang, serif;">섬김</span> <span lang="KO" style="font-family: Batang, serif;">등</span> <span lang="KO" style="font-family: Batang, serif;">보이는</span> <span lang="KO" style="font-family: Batang, serif;">곳과</span> <span lang="KO" style="font-family: Batang, serif;">보이지</span> <span lang="KO" style="font-family: Batang, serif;">않는</span> <span lang="KO" style="font-family: Batang, serif;">곳에서</span> <span lang="KO" style="font-family: Batang, serif;">헌신해</span> <span lang="KO" style="font-family: Batang, serif;">주신</span> <span lang="KO" style="font-family: Batang, serif;">모든</span> <span lang="KO" style="font-family: Batang, serif;">성도님들께도</span> <span lang="KO" style="font-family: Batang, serif;">깊이</span> <span lang="KO" style="font-family: Batang, serif;">감사드립니다</span>.</p>
+                        <p style="margin: 0in 0in 6pt; line-height: 20.5333px; font-size: 14pt; font-family: Aptos, sans-serif;"><span lang="KO" style="font-family: Batang, serif;">다음</span> <span lang="KO" style="font-family: Batang, serif;">세미나는</span> <span lang="KO" style="font-family: Batang, serif;">더욱</span> <span lang="KO" style="font-family: Batang, serif;">하나님께</span> <span lang="KO" style="font-family: Batang, serif;">영광</span> <span lang="KO" style="font-family: Batang, serif;">돌리는</span> <span lang="KO" style="font-family: Batang, serif;">시간이</span> <span lang="KO" style="font-family: Batang, serif;">되기를</span> <span lang="KO" style="font-family: Batang, serif;">기도합니다</span>.</p>
                     </div>
                 </div>
-                <div class="card-footer bg-white py-3 text-end">
-                    <button class="btn btn-outline-secondary btn-sm">프린트</button>
-                    <button class="btn btn-primary btn-sm">추천</button>
-                    <button class="btn btn-secondary btn-sm">수정</button>
-                    <button class="btn btn-danger btn-sm">삭제</button>
+                <!-- Buttons -->
+                <div class="card-footer bg-white border-top-0 py-3 text-end">
+                    <button class="btn btn-outline-secondary btn-sm me-1">프린트</button>
+                    <button class="btn btn-outline-primary btn-sm me-1">추천</button>
+                    <button class="btn btn-outline-dark btn-sm me-1">수정</button>
+                    <button class="btn btn-outline-danger btn-sm me-1">삭제</button>
+                    <button class="btn btn-outline-secondary btn-sm me-1">답변</button>
                     <button class="btn btn-dark btn-sm">목록</button>
                 </div>
             </div>
 
-            <!-- Comments Section (All 12) -->
-            <div class="card mb-4 shadow-sm">
-                <div class="card-header fw-bold">댓글</div>
+            <!-- ALL 12 COMMENTS (Preserved Exactly) -->
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-header bg-light fw-bold">댓글</div>
                 <div class="card-body p-0">
-                    <div class="list-group list-group-flush">
-                        <div class="list-group-item bg-light"><strong>신동일 :</strong> 분위기가 너무 밝고 따뜻했고 섬기는 분들의 얼굴에 웃음이 가득했었습니다. (04.28 15:22)</div>
-                        <div class="list-group-item"><strong>최병희A :</strong> 영어권 평신도 세미나가 북미에서 4 곳에서 열리는 것이 놀라울 따름입니다. (04.28 15:56)</div>
-                        <div class="list-group-item bg-light"><strong>오상연 :</strong> Praise God! incredible to see what you and members were able to offer... (04.28 16:41)</div>
-                        <div class="list-group-item"><strong>이경태 :</strong> 우와~ 평세로 섬기시다니 넘 멋져부러요~ 영어권에서 더 많은... (04.28 17:16)</div>
-                        <div class="list-group-item bg-light"><strong>최지원 :</strong> Every time I hear updates about English-speaking house churches... (04.28 17:23)</div>
-                        <div class="list-group-item"><strong>염인철 :</strong> 영어권 가정교회 14개와 한국어권 가정교회 2개가 있다는 것이 인상적입니다. (04.28 17:40)</div>
-                        <div class="list-group-item bg-light"><strong>남인철 :</strong> 김영수 목사님, 24분의 참가자를 섬기신 것도 아름답고 축하드립니다. (04.29 09:05)</div>
-                        <div class="list-group-item"><strong>DanielHyun :</strong> 목사님, 너무 멋져요. 기쁨과 웃음과 섬김이 있는 천국 분위기였을거예요. (04.29 12:18)</div>
-                        <div class="list-group-item bg-light"><strong>홈피지킴이 :</strong> 첫 세미나 성공적으로 끝내심을 축하드립니다. (04.29 21:02)</div>
-                        <div class="list-group-item"><strong>박태진 :</strong> 너무나도 아름다운 섬김 감사드립니다. 저도 같이 가야겠습니다. (04.30 06:58)</div>
-                        <div class="list-group-item bg-light"><strong>강재원 :</strong> 첫 평세를 성공적으로 마치신 것을 축하드립니다. (05.06 22:07)</div>
-                        <div class="list-group-item"><strong>양수지 :</strong> 김영수 목사님, 정말 수고 많으셨고 귀한 섬김과 나눔 감사 드립니다! (05.06 22:11)</div>
-                    </div>
+                    <div class="comment-row"><b>신동일 :</b> 참석해서 강의로 돕고 또한 경험해 본 사람으로 아주 높은 점수를 주고 싶습니다. 분위기가 너무 밝고 따뜻했고 섬기는 분들의 얼굴에 웃음이 가득했었습니다. <br /><br />그리고 목자들의 간증은 정말 너무 깊고 감동적이었습니다. 그들에게 교회와 가정교회가 없었더라면 과연 어떠한 삶을 살았을까 생각하면서 하나님께 감사하는 시간이었습니다. 수고하셨습니다. 앞으로 더욱 많은 축복을 받고 더욱 헌신적으로 섬기는 교회가 되길 바랍니다. (04.28 15:22) <span class="edit-icon">ⓔ</span></div>
+                    <div class="comment-row"><b>최병희A :</b> 영어권 평신도 세미나가 북미에서 4 곳에서 열리는 것이 놀라울 따름입니다. 앞으로도 서로 도우며 하나님의 나라를 잘 세워가기를 소망합니다. 영수 목사님과 교회 분들 모두 수고 많으셨습니다. 신동일 목사님도요~~ (04.28 15:56) <span class="edit-icon">ⓔ</span></div>
+                    <div class="comment-row"><b>오상연 :</b> Praise God! incredible to see what you and members were able to offer to the kingdom... thank you for sharing Pastor Youngsoo! (04.28 16:41) <span class="edit-icon">ⓔ</span></div>
+                    <div class="comment-row"><b>이경태 :</b> 우와~ 평세로 섬기시다니 넘 멋져부러요~ 영어권에서 더 많은 가정교회가 든든히.세워져 갈 것을 생각하니 설레는 마음입니다~ ^_^ (04.28 17:16) <span class="edit-icon">ⓔ</span></div>
+                    <div class="comment-row"><b>최지원 :</b> Every time I hear updates about English-speaking house churches at the pastors’ conference, I am reminded how profoundly grateful I am for our English-speaking pastors and how deeply proud I am of them. You are a great blessing to us all. And hearing that you are leading the House Church Seminar for Lay Leaders so beautifully makes me even more thankful.Thank you, too, for sharing this update. It gives us the joy of praying more specifically for Journey Christian Fellowship. And what a beautiful rainbow of promise God gave you. I am deeply grateful for the grace He has given you thus far, and even more, my heart is filled with joyful expectation for the greater grace still to come. (04.28 17:23) <span class="edit-icon">ⓔ</span></div>
+                    <div class="comment-row"><b>염인철 :</b> 영어권 가정교회 14개와 한국어권 가정교회 2개가 있다는 것이 정말 인상적입니다. <br />또 2,000년부터 두 회중을 함께 인도하고 계시는 것도 정말 대단하다고 느껴집니다. <br />북미주에 튼튼한 가정교회 영어 회중이 많아지는 것이 정말 감사하네요. <br />세미나 후기에 큰 은혜와 도전을 받게 해주셔서 감사합니다. ^^<br /> (04.28 17:40) <span class="edit-icon">ⓔ</span></div>
+                    <div class="comment-row"><b>남인철 :</b> 김영수 목사님, 24분의 참가자를 섬기신 것도 아름답고, 그리고 섬기신 교회 성도들도 은혜가 되었다니 정말 멋집니다. 세미나로 섬기심을 축하드립니다. ~!! (04.29 09:05) <span class="edit-icon">ⓔ</span></div>
+                    <div class="comment-row"><b>DanielHyun :</b> 목사님, 너무 멋져요. 기쁨과 웃음과 섬김이 있는 천국의 분위기였을거 같아요. 수고많으셨어요 ^^ 너무 자랑스럽습니다 ^^ (04.29 12:18) <span class="edit-icon">ⓔ</span></div>
+                    <div class="comment-row"><b>홈피지킴이 :</b> 첫 세미나 성공적으로 끝내심을 축하드립니다. 그러는 평신도를 위한 세미나 보고서는 나눔터에 올립니다. 이미 많은 댓글이 달렸기 때문에 그냥 두지만, 다음부터는 꼭 나눔터에 올려주세요. ^^; (04.29 21:02) <span class="edit-icon">ⓔ</span></div>
+                    <div class="comment-row"><b>박태진 :</b> 너무나도 아름다운 섬김 감사드립니다. 이미 목회자 세미나와 컨퍼런스에 참여해 왔지만 영어권 세미나부터 다시 시작해야겠다는 마음이 들게 되었습니다. 평신도 목자들이 참석할 때 꼭 SLO로 신청하고 저도 같이 가야겠습니다. 수고 많으셨습니다~ (04.30 06:58) <span class="edit-icon">ⓔ</span></div>
+                    <div class="comment-row"><b>강재원 :</b> 첫 평세를 성공적으로 마치신 것을 축하드립니다. 이번에 참가하고 돌아갔던 분들이 자신의 교회에서 목자로 헌신하여 사역을 시작했다는 반가운 소식들이 계속 들리기를 바랍니다. (05.06 22:07) <span class="edit-icon">ⓔ</span></div>
+                    <div class="comment-row"><b>양수지 :</b> 김영수 목사님, 정말 수고 많으셨고 귀한 섬김과 나눔 감사 드립니다~ 세례 요한이 자신의 역할이 쇠하여져 가고 예수님이 흥하여야 겠다고 하신 말씀이 백번 이해가 가네요. 우리 다음세대 영어권이 흥하여 가는 모습을 보는것이 넘나 기쁘고 행복합니다~~ 앞으로 이루실 주님의 일들을 기대하며 응원의 박수를 드립니다~~!!! (05.06 22:11) <span class="edit-icon">ⓔ</span></div>
                 </div>
                 <!-- Comment Input -->
-                <div class="card-footer bg-light">
-                    <form class="row g-2">
-                        <div class="col-md-3"><input type="text" class="form-control form-control-sm" placeholder="이름"></div>
-                        <div class="col-md-3"><input type="password" class="form-control form-control-sm" placeholder="비밀번호"></div>
-                        <div class="col-md-6 d-flex align-items-center">
-                            <img src="captcha.jpg" height="30" class="border rounded me-2" alt="Captcha">
-                            <input type="text" class="form-control form-control-sm w-25" placeholder="코드">
-                        </div>
-                        <div class="col-12 mt-2">
-                            <textarea class="form-control" rows="2" placeholder="댓글 내용을 입력하세요"></textarea>
-                        </div>
-                        <div class="col-12 text-end mt-2">
-                            <button type="submit" class="btn btn-primary btn-sm">저장</button>
-                        </div>
+                <div class="card-footer bg-light border-top">
+                    <form class="row g-2 align-items-center">
+                        <div class="col-auto"><input type="text" class="form-control form-control-sm" placeholder="이름"></div>
+                        <div class="col-auto"><input type="password" class="form-control form-control-sm" placeholder="비밀번호"></div>
+                        <div class="col-auto"><img src="captcha.jpg" height="30" class="border rounded" alt="Captcha Image"></div>
+                        <div class="col-auto"><input type="text" class="form-control form-control-sm" style="width: 60px;" placeholder="코드"></div>
+                        <div class="col-12"><textarea class="form-control" rows="2" placeholder="댓글 내용을 입력하세요"></textarea></div>
+                        <div class="col-12 text-end"><button class="btn btn-primary btn-sm px-4">저장</button></div>
                     </form>
                 </div>
             </div>
 
-            <!-- Board List (10 latest entries) -->
+            <!-- BOARD LIST (10 Latest Entries) -->
             <div class="table-responsive">
                 <table class="table table-hover border bg-white small">
-                    <thead class="table-secondary">
+                    <thead class="table-light">
                         <tr class="text-center">
                             <th>번호</th>
                             <th>제 목</th>
                             <th>이름</th>
                             <th>작성일</th>
                             <th>조회</th>
+                            <th>추천</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td class="text-center">3647</td>
-                            <td>♥개척가정교회｜"가정교회를 이끌고 나갈 미래의 용사들" (21)</td>
+                            <td>♥개척가정교회｜"가정교회를 이끌고 나갈 미래의 용사들" <span class="text-muted">(21)</span></td>
                             <td class="text-center">이채희</td>
                             <td class="text-center">2026.04.28</td>
                             <td class="text-center">478</td>
+                            <td class="text-center">6</td>
                         </tr>
                         <tr class="table-info">
                             <td class="text-center fw-bold">>></td>
-                            <td class="fw-bold">Reflection After Hosting House Church Seminar for Lay Leaders... (12)</td>
+                            <td><b>Reflection After Hosting House Church Seminar for Lay Leaders...</b> <span class="text-muted">(12)</span></td>
                             <td class="text-center">김영수</td>
                             <td class="text-center">2026.04.28</td>
                             <td class="text-center">195</td>
+                            <td class="text-center">5</td>
                         </tr>
                         <tr>
                             <td class="text-center">3645</td>
-                            <td>소문의 낙원 휴스턴서울교회(연수보고) (3)</td>
+                            <td>소문의 낙원 휴스턴서울교회(연수보고) <span class="text-muted">(3)</span></td>
                             <td class="text-center">권선희</td>
                             <td class="text-center">2026.04.24</td>
                             <td class="text-center">268</td>
+                            <td class="text-center">5</td>
                         </tr>
                         <tr>
                             <td class="text-center">3644</td>
-                            <td>"꽃 피는 벤쿠버" 140차 북미 목회자 컨퍼런스 (20)</td>
+                            <td>"꽃 피는 벤쿠버" 140차 북미 목회자 컨퍼런스 <span class="text-muted">(20)</span></td>
                             <td class="text-center">최지원</td>
                             <td class="text-center">2026.04.24</td>
                             <td class="text-center">337</td>
+                            <td class="text-center">11</td>
                         </tr>
                         <tr>
                             <td class="text-center">3643</td>
-                            <td>(교회의 유익을 우선하는) 정면 돌파! 솔직함과 소통의 목회! (9)</td>
+                            <td>(교회의 유익을 우선하는) 정면 돌파! 솔직함과 소통의 목회! <span class="text-muted">(9)</span></td>
                             <td class="text-center">김형구</td>
                             <td class="text-center">2026.04.22</td>
                             <td class="text-center">347</td>
+                            <td class="text-center">12</td>
                         </tr>
                         <tr>
                             <td class="text-center">3642</td>
-                            <td>사람이 변하는 곳, 교회 (휴스턴 서울교회 연수 보고서) (4)</td>
+                            <td>사람이 변하는 곳, 교회 (휴스턴 서울교회 연수 보고서) <span class="text-muted">(4)</span></td>
                             <td class="text-center">이태형</td>
                             <td class="text-center">2026.04.21</td>
                             <td class="text-center">145</td>
+                            <td class="text-center">1</td>
                         </tr>
                         <tr>
                             <td class="text-center">3641</td>
-                            <td>휴스턴 서울교회 연수보고 (4)</td>
+                            <td>휴스턴 서울교회 연수보고 <span class="text-muted">(4)</span></td>
                             <td class="text-center">박정민</td>
                             <td class="text-center">2026.04.17</td>
                             <td class="text-center">193</td>
+                            <td class="text-center">1</td>
                         </tr>
                         <tr>
                             <td class="text-center">3640</td>
-                            <td>가정교회 스피릿이 일상이 된 교회(휴스턴서울교회 연수보고서) (4)</td>
+                            <td>가정교회 스피릿이 일상이 된 교회(휴스턴서울교회 연수보고서) <span class="text-muted">(4)</span></td>
                             <td class="text-center">문충현</td>
                             <td class="text-center">2026.04.16</td>
                             <td class="text-center">163</td>
+                            <td class="text-center">0</td>
                         </tr>
                         <tr>
                             <td class="text-center">3639</td>
-                            <td>세 축 네 기둥이 실제인 교회 (휴스턴 서울교회 연수 보고서) (2)</td>
+                            <td>세 축 네 기둥이 실제인 교회 (휴스턴 서울교회 연수 보고서) <span class="text-muted">(2)</span></td>
                             <td class="text-center">이상성</td>
                             <td class="text-center">2026.04.07</td>
                             <td class="text-center">286</td>
+                            <td class="text-center">1</td>
                         </tr>
                         <tr>
                             <td class="text-center">3638</td>
-                            <td>하나님이 기뻐하시는 교회 (연수보고) (5)</td>
+                            <td>하나님이 기뻐하시는 교회 (연수보고) <span class="text-muted">(5)</span></td>
                             <td class="text-center">전상출</td>
                             <td class="text-center">2026.04.05</td>
                             <td class="text-center">275</td>
+                            <td class="text-center">2</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <!-- Pagination -->
-            <nav class="mt-3">
-                <ul class="pagination pagination-sm justify-content-center">
-                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">...10</a></li>
-                </ul>
-            </nav>
-        </main>
+            <!-- Search Bar -->
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <form class="d-inline-flex">
+                        <select class="form-select form-select-sm me-2 w-auto">
+                            <option value="">선택</option>
+                            <option value="title">제목</option>
+                            <option value="body">내용</option>
+                            <option value="name">글쓴이</option>
+                        </select>
+                        <input type="text" class="form-control form-control-sm me-2" style="width: 200px;">
+                        <button class="btn btn-secondary btn-sm me-1">검색</button>
+                        <button class="btn btn-outline-secondary btn-sm">취소</button>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</main>
 
 <footer class="bg-white border-top py-5 text-center mt-5">
     <div class="container">
