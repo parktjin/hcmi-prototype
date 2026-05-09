@@ -7,6 +7,8 @@
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        body { background-color: #f8f9fa; font-family: "맑은 고딕", "Malgun Gothic", sans-serif; }
+        
         /* Rule: Main banner fills the container width perfectly */
         .main-top-banner img {
             width: 100%;
@@ -14,17 +16,20 @@
             display: block;
         }
 
-        /* Rule: Side Carousel - Same ratio, no cropping */
+        /* Rule: Carousel - Natural ratio, no cropping */
         .carousel-item img {
             width: 100%;
             height: auto;
             display: block;
         }
 
-        .card { border-radius: 8px; border: 1px solid #dee2e6; }
+        .card { border-radius: 4px; border: 1px solid #dee2e6; margin-bottom: 20px; }
+        .card-header { background-color: #fff; border-bottom: 1px solid #eee; font-weight: bold; }
+        .list-group-item { border-left: 0; border-right: 0; padding: 8px 15px; }
+        .text-truncate { max-width: 100%; display: inline-block; vertical-align: middle; }
     </style>
 </head>
-<body class="bg-light">
+<body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-xl navbar-dark bg-dark mb-4">
@@ -35,106 +40,235 @@
         </button>
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="http://www.housechurchministries.org/html/main/main.htm">Home</a></li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">가정교회사역원소개</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">가정교회란?</a></li>
-                        <li><a class="dropdown-item" href="#">사역원 조직</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/info/info01.htm">가정교회란?</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/info/info02.htm">가정교회 사명</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/info/info03.htm">사역방향과 목표</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/info/info04.htm">가정교회를 위한 전략적 목표</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/info/info05.htm">가정교회 사역원 조직</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/info/info06.htm">지역 간사 및 목자</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/info/info07.htm">이사방</a></li>
                     </ul>
                 </li>
-                <li class="nav-item"><a class="nav-link" href="#">세미나 및 행사</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">상담실&나눔터</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">자료실</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">네트워크</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">세미나 및 행사</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/seminar/seminar01.htm">연중카렌다</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/seminar/seminar02.htm">세미나</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/seminar/seminar03.htm">컨퍼런스</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/seminar/seminar05.htm">주최교회 자료실</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/seminar/seminar06.htm">가정교회 특강 / 특별 모임</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/seminar/seminar07.htm">강단대리설교자</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/seminar/seminar04.htm">연수</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">목자들의광장</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/mokjang1/mokjang01.htm">목자컨퍼런스 소개</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/mokjang1/mokjang02.htm">[북미] 목자 컨퍼런스</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/mokjang1/mokjang03.htm">[한국] 목자 컨퍼런스</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/mokjang1/mokjang04.htm">푸른초장</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/mokjang1/mokjang05_02.htm">게시판</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">상담실&나눔터</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/community/community02.htm">가정교회 토론방</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/community/community08.php">구인/구직 게시판</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/community/community04.htm">개척 가정교회 나눔방</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/community/community05.htm">나눔터</a></li>
+                        <li><a class="dropdown-item" href="http://www.housechurchministries.org/html/community/community07.htm">원장코너</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
 
 <main class="container">
-    <!-- STATIC MAIN BANNER (Now fills the 3-column width horizontally) -->
+    <!-- MAIN BANNER: Fills 3-column width -->
     <div class="row mb-4">
         <div class="col-12 main-top-banner">
-            <img src="main_img.gif" alt="Main Banner" class="shadow-sm border rounded">
+            <img src="http://www.housechurchministries.org/images/main/main_img.gif" alt="Main Banner" class="shadow-sm border rounded">
         </div>
     </div>
 
     <div class="row">
-        <!-- 1. MIDDLE COLUMN (Order 1 on Mobile, 2 on Desktop) -->
-        <div class="col-lg-6 order-1 order-lg-2">
-            <!-- Notices -->
-            <div class="card mb-4 shadow-sm border-0">
-                <div class="card-header bg-white fw-bold">가사원 공지사항</div>
-                <div class="list-group list-group-flush">
-                    <div class="list-group-item small text-truncate"><span class="text-muted me-2">2026-04-24</span> Emmaus Presbyterian Church 회원 등... <span class="badge bg-primary">4</span></div>
-                    <div class="list-group-item small text-truncate"><span class="text-muted me-2">2026-04-08</span> 울산중구 대현교회 회원 등... (13)</div>
+        <!-- LEFT COLUMN (lg-3) -->
+        <div class="col-lg-3 order-2 order-lg-1">
+            <!-- SIDE CAROUSEL -->
+            <div id="sideBannerCarousel" class="carousel slide mb-3 border shadow-sm rounded overflow-hidden" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <a href="http://joam.org" target="_blank"><img src="car1.jpg" alt="Slide 1"></a>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <a href="https://info.housechurchministries.org/seminar/01.html" target="_blank"><img src="car2.jpg" alt="Slide 2"></a>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <a href="https://gasawon.hcmcampus.org/" target="_blank"><img src="car3.jpg" alt="Slide 3"></a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Church Search -->
-            <div class="card bg-white border-0 shadow-sm p-3 mb-4">
-                <h6 class="fw-bold">주소록 검색</h6>
+            <!-- Action Buttons -->
+            <div class="d-grid gap-2 mb-4">
+                <button class="btn btn-primary btn-sm" onclick="window.open('https://info.housechurchministries.org/seminar/08.php')">평신도 세미나 신청 안내</button>
+                <button class="btn btn-outline-secondary btn-sm" onclick="window.open('https://info.housechurchministries.org/seminar/21.html')">목회자 세미나 신청 안내</button>
+            </div>
+
+            <!-- Mini List Blocks -->
+            <div class="card shadow-sm">
+                <div class="card-header small">목회자를 위한 세미나</div>
+                <div class="list-group list-group-flush small">
+                    <a href="#" class="list-group-item list-group-item-action">제339차 알마타중앙...</a>
+                    <a href="#" class="list-group-item list-group-item-action">제340차 스리랑카...</a>
+                    <a href="#" class="list-group-item list-group-item-action">[인니 꺼둥문두]...</a>
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-header small">평신도를 위한 세미나</div>
+                <div class="list-group list-group-flush small">
+                    <a href="#" class="list-group-item list-group-item-action">지방 세미나 참석 권장</a>
+                    <a href="#" class="list-group-item list-group-item-action">제930차 토론토 목민</a>
+                    <a href="#" class="list-group-item list-group-item-action">제931차 전주 목원</a>
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-header small">지역별 컨퍼런스</div>
+                <div class="list-group list-group-flush small">
+                    <a href="#" class="list-group-item list-group-item-action">컨퍼런스 삶 공부 내용</a>
+                    <a href="#" class="list-group-item list-group-item-action">제141차 수도권남부</a>
+                    <a href="#" class="list-group-item list-group-item-action">제142차 전북초원</a>
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-header small">목자 컨퍼런스 및 연수</div>
+                <div class="list-group list-group-flush small">
+                    <a href="#" class="list-group-item list-group-item-action">제60차 인니 서부자바</a>
+                    <a href="#" class="list-group-item list-group-item-action">제51차 판교.제주</a>
+                    <a href="#" class="list-group-item list-group-item-action">토론토초원 연수</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- MIDDLE COLUMN (lg-6) -->
+        <div class="col-lg-6 order-1 order-lg-2">
+            <!-- Notices -->
+            <div class="card shadow-sm">
+                <div class="card-header">가사원 공지사항</div>
+                <div class="list-group list-group-flush small">
+                    <div class="list-group-item text-truncate"><span class="text-muted me-2">2023-07-29</span> <strong>국제가사원 회원이 되어 주세요.</strong></div>
+                    <div class="list-group-item text-truncate"><span class="text-muted me-2">2026-04-24</span> Emmaus Presbyterian Church(Don Lee) 회원... <span class="badge bg-primary">4</span></div>
+                    <div class="list-group-item text-truncate"><span class="text-muted me-2">2026-04-08</span> 울산중구 대현교회(유영민 목사) 회원 등... (13)</div>
+                    <div class="list-group-item text-truncate"><span class="text-muted me-2">2026-03-19</span> 한국가정교회사역원 강단대리설교자 지침서</div>
+                    <div class="list-group-item text-truncate"><span class="text-muted me-2">2026-03-14</span> 목자 목녀를 위한 1일 특강 안내 (7)</div>
+                </div>
+            </div>
+
+            <!-- Search -->
+            <div class="card bg-light p-3 border-0 shadow-sm">
+                <h6 class="fw-bold mb-3">가정교회 주소록 검색</h6>
                 <form class="row g-2">
-                    <div class="col-sm-5"><select class="form-select form-select-sm"><option>-- 국가 --</option></select></div>
-                    <div class="col-sm-7"><button type="button" class="btn btn-primary btn-sm w-100">검색</button></div>
+                    <div class="col-sm-4"><select class="form-select form-select-sm"><option>-- 국가 --</option></select></div>
+                    <div class="col-sm-4"><select class="form-select form-select-sm"><option>-- 지역 --</option></select></div>
+                    <div class="col-sm-4"><select class="form-select form-select-sm"><option>-- 검색 --</option></select></div>
+                    <div class="col-sm-9"><input type="text" class="form-control form-control-sm" placeholder="검색어 입력"></div>
+                    <div class="col-sm-3"><button type="button" class="btn btn-primary btn-sm w-100">검색</button></div>
                 </form>
             </div>
 
             <!-- Discussion Board -->
-            <div class="card mb-4 shadow-sm border-0">
-                <div class="card-header bg-white fw-bold">가정교회 토론방</div>
-                <div class="list-group list-group-flush">
+            <div class="card shadow-sm mt-4">
+                <div class="card-header">가정교회 토론방</div>
+                <div class="list-group list-group-flush small">
                     <div class="list-group-item d-flex justify-content-between align-items-center">
-                        <span class="text-truncate small">♥개척가정교회｜"미래의 용사들..."</span>
+                        <span class="text-truncate">♥개척가정교회｜"가정교회를 이끌고 나갈 미래의 용사들"</span>
                         <span class="badge bg-secondary rounded-pill">21</span>
                     </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <span class="text-truncate">Reflection After Hosting House Church Seminar...</span>
+                        <span class="badge bg-secondary rounded-pill">12</span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <span class="text-truncate">소문의 낙원 휴스턴서울교회(연수보고)</span>
+                        <span class="badge bg-secondary rounded-pill">3</span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <span class="text-truncate">"꽃 피는 벤쿠버" 140차 북미 목회자 컨퍼런스</span>
+                        <span class="badge bg-secondary rounded-pill">20</span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <span class="text-truncate">(교회의 유익을 우선하는) 정면 돌파! 솔직함과 소통!</span>
+                        <span class="badge bg-secondary rounded-pill">9</span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <span class="text-truncate">사람이 변하는 곳, 교회 (휴스턴 서울교회 연수보고)</span>
+                        <span class="badge bg-secondary rounded-pill">4</span>
+                    </div>
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <span class="text-truncate">휴스턴 서울교회 연수보고</span>
+                        <span class="badge bg-secondary rounded-pill">4</span>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- 2. LEFT COLUMN (Order 2 on Mobile, 1 on Desktop) -->
-        <div class="col-lg-3 order-2 order-lg-1">
-            
-            <!-- SIDE CAROUSEL (The actual carousel) -->
-            <div id="sideBannerCarousel" class="carousel slide mb-3 border shadow-sm rounded overflow-hidden" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="5000">
-                        <a href="#"><img src="car1.jpg" alt="Slide 1"></a>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="5000">
-                        <a href="#"><img src="car2.jpg" alt="Slide 2"></a>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="5000">
-                        <a href="#"><img src="car3.jpg" alt="Slide 3"></a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Buttons -->
-            <div class="d-grid gap-2 mb-4">
-                <button class="btn btn-primary btn-sm">평신도 세미나 신청</button>
-                <button class="btn btn-outline-secondary btn-sm">목회자 세미나 신청</button>
-            </div>
-
-            <div class="card mb-3 shadow-sm border-0">
-                <div class="card-header bg-white small fw-bold">세미나 안내</div>
+            <!-- Sharing Board -->
+            <div class="card shadow-sm mt-4">
+                <div class="card-header">나눔터</div>
                 <div class="list-group list-group-flush small">
-                    <a href="#" class="list-group-item">제339차 알마타중앙...</a>
-                    <a href="#" class="list-group-item">제340차 스리랑카...</a>
+                    <div class="list-group-item text-truncate">이제 함께 꿈꾸는 동역자로!(929차 평신도 세미나) (1)</div>
+                    <div class="list-group-item text-truncate">여기 다음 세대를 위해 헌신한 사역자들... (1)</div>
+                    <div class="list-group-item text-truncate">가정교회에 대해 의심이 많은 사람이 929차... (2)</div>
+                    <div class="list-group-item text-truncate">“흩어져도 이어지는 영혼구원의 사명” ... (1)</div>
+                    <div class="list-group-item text-truncate">"여름 사역 전 힐링 빌드업!" 경기중부지회 (6)</div>
+                    <div class="list-group-item text-truncate">2026 제3회 인앤아웃 행사 후기 (1)</div>
+                    <div class="list-group-item text-truncate">“목사님 또 뭐 시켜주실 겁니까? 못할게... (4)</div>
+                    <div class="list-group-item text-truncate">예수 그리스도의 사랑으로 한 줄에 꿰어... (5)</div>
+                    <div class="list-group-item text-truncate">연두가 연두를 만나 향기를 드러냈습니다... (3)</div>
+                    <div class="list-group-item text-truncate">제 11차 군사의 삶공부에 초대합니다.</div>
                 </div>
             </div>
         </div>
 
-        <!-- 3. RIGHT COLUMN (Order 3) -->
+        <!-- RIGHT COLUMN (lg-3) -->
         <div class="col-lg-3 order-3">
-            <div class="card border-0 shadow-sm mb-4 text-center p-2">
-                <div class="fw-bold mb-2">원장코너</div>
-                <div class="small text-truncate">"목양의 본질" <br><small class="text-muted">2026.05.07</small></div>
+            <div class="card border-primary shadow-sm mb-4">
+                <div class="card-header bg-primary text-white">원장코너</div>
+                <div class="list-group list-group-flush small">
+                    <div class="list-group-item text-truncate"><small class="text-muted">620</small> "목양의 본질" &lt;5.7.2026&gt;</div>
+                    <div class="list-group-item text-truncate"><small class="text-muted">619</small> "없어야 할 청빙위원회" (5)</div>
+                    <div class="list-group-item text-truncate"><small class="text-muted">618</small> "VIP가 초원지기로..." (5)</div>
+                    <div class="list-group-item text-truncate"><small class="text-muted">617</small> "가정교회를 잘 정착..." (4)</div>
+                    <div class="list-group-item text-truncate"><small class="text-muted">616</small> "가정교회의 축복" (13)</div>
+                    <div class="list-group-item text-truncate"><small class="text-muted">615</small> "될 일을 먼저 생각..." (11)</div>
+                </div>
             </div>
-            
+
+            <div class="card shadow-sm mb-4">
+                <div class="card-header">구인/구직 게시판</div>
+                <div class="list-group list-group-flush small">
+                    <div class="list-group-item text-truncate"><span class="badge bg-secondary">기타</span> 게시판 안내...</div>
+                    <div class="list-group-item text-truncate"><span class="badge bg-success">교역자</span> 미국 얼바인...</div>
+                    <div class="list-group-item text-truncate"><span class="badge bg-success">교역자</span> 청소년부 사역자...</div>
+                    <div class="list-group-item text-truncate"><span class="badge bg-success">교역자</span> 안양북부교회...</div>
+                    <div class="list-group-item text-truncate"><span class="badge bg-success">교역자</span> [추가] 수원...</div>
+                    <div class="list-group-item text-truncate"><span class="badge bg-success">교역자</span> 서대구교회...</div>
+                </div>
+            </div>
+
             <div class="text-center">
-                <img src="http://www.housechurchministries.org/images/main/right_banner03.gif" class="img-fluid border rounded shadow-sm" alt="Side Banner">
+                <a href="http://hc360.ch360.org/" target="_blank">
+                    <img src="http://www.housechurchministries.org/images/main/right_banner03.gif" class="img-fluid border rounded shadow-sm" alt="Side Banner">
+                </a>
             </div>
         </div>
     </div>
@@ -142,6 +276,7 @@
 
 <footer class="bg-white border-top py-5 text-center mt-5">
     <div class="container">
+        <img src="http://www.housechurchministries.org/images/common/main_copy.gif" class="img-fluid mb-2" alt="Footer Logo">
         <p class="text-muted small mb-0">Copyright © House Church Ministries. All Rights Reserved.</p>
     </div>
 </footer>
